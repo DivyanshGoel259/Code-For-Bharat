@@ -17,7 +17,7 @@ export const IconCard = ({
             <Icon></Icon>
           </div>
         </div>
-        <div className={` text-center ${iconTextSize} ${iconColor}`}>
+        <div className={` font-zendots text-center ${iconTextSize} ${iconColor}`}>
           {iconText}
         </div>
         <div className={`mt-2 text-center ${titleSize} ${titleColor}`}>

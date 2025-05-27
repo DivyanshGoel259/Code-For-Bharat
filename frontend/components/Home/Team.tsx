@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const Team = () => {
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-slate-800">
+    <div className="h-screen flex flex-col justify-center items-center bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
       <div>
         {/* Judges & Mentors Heading */}
         <motion.div
@@ -14,9 +14,9 @@ export const Team = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-playfair text-center text-4xl font-bold text-white"
+          className="font-hadgrid text-center text-4xl font-bold text-white"
         >
-          Judges & Mentors
+          JUDGES & MENTORS
         </motion.div>
 
         <div className="p-2 mt-6 flex gap-5">
@@ -38,9 +38,9 @@ export const Team = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mt-6 font-playfair text-center text-4xl font-bold text-white"
+          className="mt-6 font-hadgrid text-center text-4xl font-bold text-white"
         >
-          Lead Organizers
+          LEAD ORGANIZERS
         </motion.div>
 
         <div className="p-2 mt-6 flex gap-5">

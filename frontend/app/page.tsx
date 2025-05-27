@@ -11,10 +11,12 @@ export default function Home() {
   return (
     <div>
       <AboutSection></AboutSection>
-      <DigitalSwag/>
+      {/* <DigitalSwag/>
       <PrizePool/>
       <Sponsors/>
-      <FAQ/>
+      <FAQ/> */}
+      <Team/>
+      <Tracks/>
     </div>
   );
 }

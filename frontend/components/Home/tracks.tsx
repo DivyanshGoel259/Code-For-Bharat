@@ -34,12 +34,9 @@ const tracks = [
 export const Tracks = () => {
   const [track, setTrack] = useState({ id: 0, isOpen: false });
 
-  useEffect(() => {
-    console.log(track.isOpen);
-  }, [track.isOpen]);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-slate-800">
+    <div className="h-screen flex flex-col justify-center items-center bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
       {/* Heading Animation on scroll into view */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -57,11 +54,11 @@ export const Tracks = () => {
           return (
             <motion.div
               key={payload.id}
-              onClick={() => {
-                if (track.isOpen) {
-                  setTrack({ ...track, isOpen: false });
-                }
+              onMouseEnter={() => {
                 setTrack({ id: payload.id, isOpen: true });
+              }}
+              onMouseLeave={()=>{
+                  setTrack({ ...track, isOpen: false })
               }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +80,7 @@ export const Tracks = () => {
                 className="w-full h-full"
               />
               <div className="bg-black absolute p-2 bottom-0 left-0 right-0">
-                <div className="font-bold p-1 rounded-full border-4 border-white text-white bg-transparent flex flex-col justify-center items-center">
+                <div className="font-zendots font-bold p-1 rounded-full border-4 border-white text-white bg-transparent flex flex-col justify-center items-center">
                   {isActive ? payload.name : payload.id}
                 </div>
               </div>

@@ -58,6 +58,8 @@ export default {
   		},
 		fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
+		 zendots: ['"Zen Dots"', 'sans-serif'],
+		 hadgrid: ['"Orbitron"', 'sans-serif'],
       },
 	  
   	}
