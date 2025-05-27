@@ -1,4 +1,6 @@
 import { AboutSection } from "@/components/Home/about-section";
+import { Team } from "@/components/Home/Team";
+import { Tracks } from "@/components/Home/tracks";
 import Image from "next/image";
 import DigitalSwag from "@/components/Home/digitalswag";
 import PrizePool from "@/components/Home/prizepool";

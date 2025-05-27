@@ -120,4 +120,39 @@ export const items = [
       linkedin: "https://www.linkedin.com/in/sanskar-chaturvedi-4a558024b",
     },
   ];
+
+
+export const teamCards= [
+  {
+    id:1,
+    imageUrl: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Arjun Mehra",
+    information: "Full-stack developer"
+  },
+  {
+    id:2,
+    imageUrl: "https://randomuser.me/api/portraits/women/45.jpg",
+    name: "Sneha Kapoor",
+    information: "UI/UX designer"
+  },
+  {
+    id:3,
+    imageUrl: "https://randomuser.me/api/portraits/men/18.jpg",
+    name: "Rohit Verma",
+    information: "DevOps engineer"
+  },
+  {
+    id:4,
+    imageUrl: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Neha Singh",
+    information: "Project manager"
+  },
+  {
+    id:5,
+    imageUrl: "https://randomuser.me/api/portraits/men/76.jpg",
+    name: "Karan Joshi",
+    information: "Backend engineer"
+  }
+];
+
   

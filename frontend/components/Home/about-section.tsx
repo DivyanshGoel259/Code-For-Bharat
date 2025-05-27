@@ -62,7 +62,7 @@ export const AboutSection = () => {
       </div>
 
       <div>
-        {/* <div className="mt-10">
+        <div className="mt-10">
           <Marquee className="[--duration:15s]">
             {firstRow.map((payload, index) => (
               <CarouselCards
@@ -82,23 +82,22 @@ export const AboutSection = () => {
             ))}
           </Marquee>
         </div>
-      </div> */}
-    </div>
+      </div>
     </div>
   );
 };
 
-// const CarouselCards = ({ imgUrl, name }: { imgUrl: string; name: string }) => {
-//   return (
-//     <div className="w-40 h-40 flex justify-center items-center border-4 border-[#c69320] rounded-[22px] overflow-hidden">
-//       <Image
-//         className="rounded-lg object-cover"
-//         src={imgUrl}
-//         alt={`Image of ${name}`}
-//         width={240} // Fixed width
-//         height={240} // Fixed height
-//         loading="lazy"
-//       />
-//     </div>
-//   );
-// };
+const CarouselCards = ({ imgUrl, name }: { imgUrl: string; name: string }) => {
+  return (
+    <div className="w-40 h-40 flex justify-center items-center border-4 border-[#c69320] rounded-[22px] overflow-hidden">
+      <Image
+        className="rounded-lg object-cover"
+        src={imgUrl}
+        alt={`Image of ${name}`}
+        width={240} // Fixed width
+        height={240} // Fixed height
+        loading="lazy"
+      />
+    </div>
+  );
+};
