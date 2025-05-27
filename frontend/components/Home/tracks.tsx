@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -66,9 +66,15 @@ export const Tracks = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.5 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 * index }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 0.1 * index,
+              }}
               className={`transition-all duration-500 ease-in-out ${
-                isActive ? "w-[16rem] rounded-[30px]" : "w-[4rem] rounded-[30px]"
+                isActive
+                  ? "w-[16rem] rounded-[30px]"
+                  : "w-[4rem] rounded-[30px]"
               } h-72 bg-[#c04123] relative overflow-hidden`}
             >
               <img
