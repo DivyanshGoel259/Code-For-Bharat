@@ -1,20 +1,13 @@
-import { AboutSection } from "@/components/Home/about-section";
-import { Team } from "@/components/Home/Team";
-import { Tracks } from "@/components/Home/tracks";
-import Image from "next/image";
-import DigitalSwag from "@/components/Home/digitalswag";
-import PrizePool from "@/components/Home/prizepool";
-import Sponsors from "@/components/Home/sponsors";
-import FAQ from "@/components/Home/faqs";
+import Hero from "@/components/Home/Hero";
+import Footer from "@/components/Home/footer";
+import Event from "@/components/Home/event";
 
 export default function Home() {
   return (
-    <div>
-      <AboutSection></AboutSection>
-      <DigitalSwag/>
-      <PrizePool/>
-      <Sponsors/>
-      <FAQ/>
-    </div>
+    <>
+      <Hero />
+      <Footer />
+      <Event />
+    </>
   );
 }
