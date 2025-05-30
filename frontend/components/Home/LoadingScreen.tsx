@@ -37,13 +37,18 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
   }, [onLoadingComplete]);
 
   return (
-    <div className={`
-      fixed inset-0 z-50 flex items-center justify-center
-      bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))]
-      from-slate-900 via-slate-800 to-slate-900
-      transition-opacity duration-1000
-      ${fadeOut ? 'opacity-0' : 'opacity-100'}
-    `}>
+    <div 
+      className={`
+        fixed inset-0 z-50 flex items-center justify-center
+        transition-opacity duration-1000
+        ${fadeOut ? 'opacity-0' : 'opacity-100'}
+      `}
+      style={{
+        backgroundImage: 'url(/src/components/background.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       <div className="font-mono text-xl md:text-2xl text-white space-y-6">
         <div className={`
           transition-all duration-1000
