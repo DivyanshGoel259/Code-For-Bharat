@@ -14,7 +14,7 @@ export const Team = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="font-hadgrid text-center text-4xl font-bold text-white"
+          className="font-Hagrid text-center text-4xl font-bold text-white"
         >
           JUDGES & MENTORS
         </motion.div>

@@ -43,7 +43,7 @@ export const Tracks = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-6xl font-bold text-white"
+        className="text-6xl font-Hagrid font-bold text-white"
       >
         Tracks
       </motion.div>

@@ -6,17 +6,14 @@ import DigitalSwag from "@/components/Home/digitalswag";
 import PrizePool from "@/components/Home/prizepool";
 import Sponsors from "@/components/Home/sponsors";
 import FAQ from "@/components/Home/faqs";
+import AnimatedSection from "@/components/Home/animatedsection";
 
 export default function Home() {
   return (
     <div>
-      <AboutSection></AboutSection>
-      {/* <DigitalSwag/>
-      <PrizePool/>
-      <Sponsors/>
-      <FAQ/> */}
-      <Team/>
-      <Tracks/>
+      <div>
+        <DigitalSwag/>
+      </div>
     </div>
   );
 }

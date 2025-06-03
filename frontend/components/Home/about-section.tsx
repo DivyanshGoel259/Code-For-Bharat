@@ -13,7 +13,7 @@ export const AboutSection = () => {
   const firstRow = items.slice(0, items.length / 2);
   const secondRow = items.slice(items.length / 2);
   return (
-    <div className="overflow-hidden bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center">
+    <div className="font-Hagrid overflow-hidden bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center">
       <div className="tracking-widest font-bold text-6xl text-center text-white p-3 mt-4 ">
         ABOUT US
       </div>
