@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "Can we use a project we've already started or must it be built from scratch?",
     answer:
-      "All projects must be built from scratch during the hackathon to ensure fairness. Pre-existing code is not allowed unless it’s open-source and available to everyone.",
+      "All projects must be built from scratch during the hackathon to ensure fairness. Pre-existing code is not allowed unless it's open-source and available to everyone.",
   },
   {
     question: 'Who can participate?',
@@ -48,7 +48,6 @@ const faqs = [
     question: 'Can I start working on my project before the event?',
     answer: 'No, all projects must be built from scratch during the hackathon. You can brainstorm ideas and form teams beforehand, but coding or building must begin only at the start of the event.'
   }
-  // Add 9 more questions and answers here...
 ];
 
 const FAQ = () => {
@@ -57,7 +56,7 @@ const FAQ = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % faqs.length);
-    }, 5000); // 5 seconds interval
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -70,34 +69,60 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-4">
-      <div className="bg-[#e9451f] px-6 py-2 rounded-full text-black font-bold text-xl mb-8">FAQs</div>
-      <div className="relative bg-[#e9451f] p-8 rounded-2xl w-full max-w-3xl text-center">
-        <h2 className="text-black text-xl font-bold mb-4">{faqs[currentIndex].question}</h2>
-        <p className="text-black max-w-2xl mx-auto">{faqs[currentIndex].answer}</p>
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-100"
+        style={{
+          backgroundImage: "url('/src/components/background.png')"
+        }}
+      />
 
-        <button
-          onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black hover:scale-110 transition"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black hover:scale-110 transition"
-        >
-          <ChevronRight size={24} />
-        </button>
+      
+          <div className="relative z-10 w-full max-w-3xl mx-auto px-4">
+  <div className="text-center mb-12">
+    <div className="bg-[#e9451f] inline-block px-12 py-3 rounded-full">
+      <h2 className="text-black font-mono text-4xl tracking-wider font-bold">FAQS</h2>
+    </div>
+  </div>
 
-        <div className="flex justify-center mt-6 space-x-2">
-          {faqs.map((_, idx) => (
-            <span
-              key={idx}
-              className={`h-2 w-2 rounded-full ${
-                idx === currentIndex ? 'bg-black' : 'bg-white'
-              }`}
-            ></span>
-          ))}
+  <div className="relative bg-[#e9451f] p-10 rounded-[2rem] text-center">
+    <h3 className="text-black font-mono text-3xl md:text-4xl font-bold mb-8 leading-tight">
+      {faqs[currentIndex].question}
+    </h3>
+    <p className="text-black text-xl md:text-2xl max-w-2xl mx-auto font-mono leading-relaxed">
+      {faqs[currentIndex].answer}
+    </p>
+
+          <button
+            onClick={handlePrev}
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-black/10 hover:bg-black/20 transition-colors rounded-full p-4 text-black"
+            aria-label="Previous question"
+          >
+            <ChevronLeft size={32} />
+          </button>
+          
+          <button
+            onClick={handleNext}
+            className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-black/10 hover:bg-black/20 transition-colors rounded-full p-4 text-black"
+            aria-label="Next question"
+          >
+            <ChevronRight size={32} />
+          </button>
+
+          <div className="flex justify-center gap-3 mt-12">
+            {faqs.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  idx === currentIndex 
+                    ? 'bg-black w-6' 
+                    : 'bg-black/40 hover:bg-black/60'
+                }`}
+                aria-label={`Go to question ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

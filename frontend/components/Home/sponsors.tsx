@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimatedSection from './animatedsection';
+import AnimatedSection from './AnimatedSection';
 
 interface SponsorCategory {
   id: string;
@@ -65,21 +65,14 @@ const sponsorCategories: SponsorCategory[] = [
 const Sponsors: React.FC = () => {
   return (
     <section id="sponsors" className="min-h-screen relative bg-slate-900 flex items-center justify-center overflow-hidden py-20">
-      {/* Background circles */}
-      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/6985003/pexels-photo-6985003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-center opacity-10"></div>
-      <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 rounded-full border border-slate-800"
-            style={{
-              transform: `scale(${1 + i * 0.15})`,
-              opacity: 1 - i * 0.1
-            }}
-          />
-        ))}
-      </div>
-
+      {/* Background pattern */}
+      <div
+  className="absolute inset-0 bg-cover bg-center opacity-100"
+  style={{
+    backgroundImage: "url('/src/components/background.png')"
+  }}
+></div>
+      
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection variant="fade-up" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wider">
@@ -95,16 +88,16 @@ const Sponsors: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {sponsorCategories[0].sponsors.map(sponsor => (
-                <div
-                  key={sponsor.id}
-                  className="aspect-[2/1] border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20 hover:translate-y-[-5px]"
-                >
-                  <img
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+<div
+  key={sponsor.id}
+  className="aspect-[3/2] border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20 hover:translate-y-[-5px]"
+>
+  <img
+    src={sponsor.image}
+    alt={sponsor.name}
+    className="w-full h-full object-cover"
+  />
+</div>
               ))}
             </div>
           </AnimatedSection>
