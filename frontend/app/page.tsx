@@ -10,11 +10,16 @@ import AnimatedSection from "@/components/Home/animatedsection";
 
 export default function Home() {
   return (
-    <div>
-      <div>
+    <div className="bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
+      <div className="p-2 ">
         <AboutSection/>
+
+      </div>
+      <div className="p-2 mt-4">
         <Team/>
-        
+      </div>
+      <div className="p-2 mt-4">
+        <Tracks/>
       </div>
     </div>
   );
