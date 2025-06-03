@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import { Home, Info, Gift, Calendar, Trophy, Users, HelpCircle } from 'lucide-react';
 

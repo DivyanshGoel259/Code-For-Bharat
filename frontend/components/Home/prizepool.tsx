@@ -1,6 +1,8 @@
+"use client"
+
 import React from 'react';
 import AnimatedCounter from './AnimatedCounter';
-import AnimatedSection from './AnimatedSection';
+import AnimatedSection from './animatedsection';
 
 const PrizePool: React.FC = () => {
   return (

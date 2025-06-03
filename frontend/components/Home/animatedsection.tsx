@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useRef, useEffect, useState, ReactNode } from 'react';
 
 type AnimationVariant = 
