@@ -11,6 +11,7 @@ import DigitalSwag from "@/components/Home/DigitalSwag";
 import PrizePool from "@/components/Home/PrizePool";
 import Sponsors from "@/components/Home/Sponsors";
 import FAQ from "@/components/Home/FAQ";
+import { AboutSection } from '@/components/Home/about-section';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,6 +60,7 @@ return (
           
           <main>
             <DigitalSwag />
+            <AboutSection/>
             <Tracks />
             <PrizePool />
             <Sponsors />

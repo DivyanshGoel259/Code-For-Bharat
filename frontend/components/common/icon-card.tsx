@@ -13,7 +13,7 @@ export const IconCard = ({
     <div>
       <div>
         <div className="p-2 flex flex-col justify-center items-center ">
-          <div className="h-20 w-20">
+          <div className="h-16 w-16">
             <Icon></Icon>
           </div>
         </div>
