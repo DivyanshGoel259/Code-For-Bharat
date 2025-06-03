@@ -69,8 +69,7 @@ const Sponsors: React.FC = () => {
       <div
   className="absolute inset-0 bg-cover bg-center opacity-100"
   style={{
-    backgroundImage: "url('/src/components/background.png')"
-  }}
+      backgroundImage: "url('/background.png')"  }}
 ></div>
       
       <div className="container mx-auto px-4 relative z-10">

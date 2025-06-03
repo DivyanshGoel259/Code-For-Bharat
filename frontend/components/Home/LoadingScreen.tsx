@@ -44,7 +44,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         ${fadeOut ? 'opacity-0' : 'opacity-100'}
       `}
       style={{
-        backgroundImage: 'url(/src/components/background.png)',
+        backgroundImage: "url('/background.png')",      
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -54,7 +54,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           transition-all duration-1000
           ${showFirstLine ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
         `}>
-          <span className="text-green-400">&gt;</span>echo "They thought it was over."
+          <span className="text-green-400">&gt;</span>echo &quot;They thought it was over.&quot;
         </div>
         
         <div className={`

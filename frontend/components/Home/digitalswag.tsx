@@ -1,6 +1,3 @@
-"use client"
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Upload, Download } from 'lucide-react';
 
@@ -30,21 +27,30 @@ const DigitalSwag: React.FC = () => {
     if (!ctx) return;
 
     // Set canvas size
-    canvas.width = 1200;
-    canvas.height = 1200;
+    canvas.width = 800;  // adjust as needed
+    canvas.height = 800;
+
 
     // Draw the frame
-    ctx.drawImage(frameImage.current, 0, 0, canvas.width, canvas.height);
+    // Define new frame size
+const frameWidth = 1000;
+const frameHeight = 1000;
+
+// Center the frame on the canvas
+const frameX = (canvas.width - frameWidth) / 2;
+const frameY = (canvas.height - frameHeight) / 2;
+
+ctx.drawImage(frameImage.current, frameX, frameY, frameWidth, frameHeight);
 
     // If there's an uploaded image, draw it in the red area
     if (image) {
       const img = new Image();
       img.onload = () => {
         // Calculate dimensions to fit the image in the red area while maintaining aspect ratio
-        const redAreaX = 300;
-        const redAreaY = 200;
-        const redAreaWidth = 900;
-        const redAreaHeight = 800;
+        const redAreaX = 200;
+const redAreaY = 150;
+const redAreaWidth = 500;
+const redAreaHeight = 500;
 
         const scale = Math.min(
           redAreaWidth / img.width,
@@ -63,10 +69,10 @@ const DigitalSwag: React.FC = () => {
 
         // Draw the name
         if (name) {
-          ctx.font = 'bold 120px "Space Grotesk"';
           ctx.fillStyle = '#ffffff';
           ctx.textAlign = 'center';
-          ctx.fillText(name.toUpperCase(), canvas.width / 2, 1100);
+          ctx.font = 'bold 60px "Space Grotesk"';
+          ctx.fillText(name.toUpperCase(), canvas.width / 2, 750)
         }
       };
       img.src = image;
@@ -116,11 +122,18 @@ const DigitalSwag: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl mx-auto">
-        <h1 className="text-6xl font-bold text-white text-center mb-16 tracking-wider">
-          DIGITAL SWAG
-        </h1>
+    <div className="min-h-screen flex items-center justify-center relative">
+      {/* Background */}
+      <div 
+        className="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center"
+        style={{ opacity: 1 }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h1 className="text-7xl font-bold text-white font-mono tracking-wider">
+            DIGITAL SWAG
+          </h1>
 
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Preview */}
@@ -175,6 +188,8 @@ const DigitalSwag: React.FC = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

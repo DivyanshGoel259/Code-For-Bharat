@@ -11,7 +11,7 @@ const SideNavigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [isVisible, setIsVisible] = useState(false);
 
-  const navItems: NavItem[] = [
+  const navItems: NavItem[] = React.useMemo(() => [
     { id: 'hero', label: 'Home', icon: <Home className="w-5 h-5" /> },
     { id: 'about', label: 'About', icon: <Info className="w-5 h-5" /> },
     { id: 'swag', label: 'Digital Swag', icon: <Gift className="w-5 h-5" /> },
@@ -19,7 +19,7 @@ const SideNavigation: React.FC = () => {
     { id: 'prizes', label: 'Prize Pool', icon: <Trophy className="w-5 h-5" /> },
     { id: 'team', label: 'Team', icon: <Users className="w-5 h-5" /> },
     { id: 'faq', label: 'FAQ', icon: <HelpCircle className="w-5 h-5" /> },
-  ];
+  ], []);
 
   useEffect(() => {
     const handleScroll = () => {
