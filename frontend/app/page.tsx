@@ -13,6 +13,7 @@ import DigitalSwag from "@/components/Home/digitalswag";
 import PrizePool from "@/components/Home/prizepool";
 import Sponsors from "@/components/Home/sponsors";
 import FAQ from "@/components/Home/faqs";
+import AnimatedSection from "@/components/Home/animatedsection";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,25 +54,19 @@ function App() {
   };
 
   return (
-    <>
-      {isLoading ? (
-        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
-      ) : (
-        <div className="min-h-screen bg-slate-50">
-          <SideNavigation />
-          
-          <main>
 
+    <div className="bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
+      <div className="p-2 ">
+        <AboutSection/>
 
-            <AboutSection></AboutSection>
-            <DigitalSwag/>
-            <PrizePool/>
-            <Sponsors/>
-            <FAQ/>
-          </main>
-        </div>
-      )}
-    </>
+      </div>
+      <div className="p-2 mt-4">
+        <Team/>
+      </div>
+      <div className="p-2 mt-4">
+        <Tracks/>
+      </div>
+    </div>
   );
 }
 
