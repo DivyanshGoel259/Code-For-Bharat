@@ -124,7 +124,7 @@ const redAreaHeight = 500;
   };
 
   return (
-    <div className="p-2 min-h-screen flex  items-center justify-center relative">
+    <div id='swag' className="p-2 min-h-screen flex  items-center justify-center relative">
       {/* Background */}
       <div 
         className="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center"

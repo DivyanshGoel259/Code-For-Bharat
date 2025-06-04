@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const Team = () => {
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
+    <div id='team' className="h-screen flex flex-col justify-center items-center bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
       <div>
         {/* Judges & Mentors Heading */}
         <motion.div

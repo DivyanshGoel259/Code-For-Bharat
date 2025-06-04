@@ -71,7 +71,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+    <div id='faq' className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-100"
         style={{

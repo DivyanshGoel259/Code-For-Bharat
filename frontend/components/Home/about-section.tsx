@@ -17,7 +17,7 @@ export const AboutSection = () => {
   const secondRow = items.slice(items.length / 2);
 
   return (
-    <div className="font-Hagrid overflow-hidden bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center">
+    <div id='about' className="font-Hagrid overflow-hidden bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center">
       
       {/* Heading */}
       <motion.div
