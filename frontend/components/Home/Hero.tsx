@@ -44,7 +44,7 @@ const formatTime = (time: number): string => {
 };
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#1a1a1a' }}>
+    <div className="bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center min-h-screen relative overflow-hidden" style={{ backgroundColor: '#1a1a1a' }}>
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');

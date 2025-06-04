@@ -124,7 +124,7 @@ const redAreaHeight = 500;
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative">
+    <div className="p-2 min-h-screen flex  items-center justify-center relative">
       {/* Background */}
       <div 
         className="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center"
@@ -133,13 +133,13 @@ const redAreaHeight = 500;
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h1 className="text-7xl font-bold text-white font-mono tracking-wider">
+          <h1 className="text-4xl font-bold text-white font-mono tracking-wider">
             DIGITAL SWAG
           </h1>
 
         <div className="flex flex-col md:flex-row gap-8 items-center">
           {/* Preview */}
-          <div className="w-full md:w-2/3 aspect-square bg-[#1a0f0f] rounded-lg overflow-hidden shadow-2xl">
+          <div className="w-full md:w-1/3 aspect-square bg-[#1a0f0f] rounded-lg overflow-hidden shadow-2xl">
             <canvas
               ref={canvasRef}
               className="w-full h-full"

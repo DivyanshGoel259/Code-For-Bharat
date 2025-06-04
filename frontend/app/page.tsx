@@ -7,11 +7,15 @@ import './animations.css';
 import LoadingScreen from '@/components/Home/LoadingScreen';
 import SideNavigation from '@/components/Home/SideNavigation';
 import { Tracks } from "@/components/Home/tracks";
-import DigitalSwag from "@/components/Home/DigitalSwag";
-import PrizePool from "@/components/Home/PrizePool";
-import Sponsors from "@/components/Home/Sponsors";
+import DigitalSwag from "@/components/Home/digitalswag";
+import PrizePool from "@/components/Home/prizepool";
+import Sponsors from "@/components/Home/sponsors";
 import FAQ from "@/components/Home/FAQ";
 import { AboutSection } from '@/components/Home/about-section';
+import CodeForBharatLanding from '@/components/Home/Hero';
+import { Team } from '@/components/Home/Team';
+import Timeline from '@/components/Home/event';
+import Footer from '@/components/Home/footer';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,12 +63,16 @@ return (
           <SideNavigation />
           
           <main>
-            <DigitalSwag />
+            <CodeForBharatLanding/>
             <AboutSection/>
+            <DigitalSwag />          
             <Tracks />
+            <Timeline/>
             <PrizePool />
+            <Team/>
             <Sponsors />
             <FAQ />
+            <Footer/>
           </main>        
         </div>
       )}

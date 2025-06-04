@@ -4,7 +4,7 @@ import { ArrowUp, Twitter, Instagram, Linkedin, Phone, Send } from 'lucide-react
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-orange-500 to-red-600 text-black mt-20">
+    <footer className="relative bg-gradient-to-b from-orange-500 to-red-600 text-black ">
       {/* Main Footer Content */}
       <div className="relative z-10 px-8 py-12">
         {/* Header Section */}
@@ -61,31 +61,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Pixelated Section using CSS only */}
-      <div className="h-20 bg-gradient-to-r from-gray-800 via-gray-600 to-gray-400 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-60">
-          <div className="w-full h-full bg-repeat pixelated-bg"></div>
-        </div>
-      </div>
-
-      <style jsx>{`
-        .pixelated-bg {
-          background-image: 
-            linear-gradient(45deg, #333 25%, transparent 25%),
-            linear-gradient(-45deg, #333 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, #666 75%),
-            linear-gradient(-45deg, transparent 75%, #666 75%);
-          background-size: 8px 8px;
-          background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
-          animation: pixelShift 2s ease-in-out infinite;
-        }
-        
-        @keyframes pixelShift {
-          0%, 100% { opacity: 0.6; }
-          50% { opacity: 0.8; }
-        }
-      `}</style>
-    </footer>
+          </footer>
   );
 };
 
