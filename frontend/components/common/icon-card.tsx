@@ -13,15 +13,16 @@ export const IconCard = ({
     <div>
       <div>
         <div className="p-2 flex flex-col justify-center items-center ">
-          <div className="h-20 w-20">
-          <Icon ></Icon>
+          <div className="h-16 w-16">
+            <Icon></Icon>
           </div>
-          
         </div>
-        <div className={` text-center ${iconTextSize} ${iconColor}`}>
+        <div className={` font-zendots text-center ${iconTextSize} ${iconColor}`}>
           {iconText}
         </div>
-        <div className={`mt-2 text-center ${titleSize} ${titleColor}`}>{title}</div>
+        <div className={`mt-2 text-center ${titleSize} ${titleColor}`}>
+          {title}
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useRef, useEffect, useState, ReactNode } from 'react';
 
 type AnimationVariant = 
@@ -90,4 +88,3 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
 };
 
 export default AnimatedSection;
->>>>>>> b5ed1f80900cff76088c73cc052753fcc4ca2f89

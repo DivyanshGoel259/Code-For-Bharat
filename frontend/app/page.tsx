@@ -1,13 +1,77 @@
-import Hero from "@/components/Home/Hero";
-import Footer from "@/components/Home/footer";
-import Event from "@/components/Home/event";
+"use client";
+import React, { useEffect, useState } from 'react';
+import './animations.css';
 
-export default function Home() {
-  return (
+// Import components
+
+import LoadingScreen from '@/components/Home/LoadingScreen';
+import SideNavigation from '@/components/Home/SideNavigation';
+import { Tracks } from "@/components/Home/tracks";
+import DigitalSwag from "@/components/Home/DigitalSwag";
+import PrizePool from "@/components/Home/PrizePool";
+import Sponsors from "@/components/Home/Sponsors";
+import FAQ from "@/components/Home/FAQ";
+import { AboutSection } from '@/components/Home/about-section';
+
+function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Smooth scroll function for navigation
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const closestAnchor = target.closest('a');
+      
+      if (closestAnchor && closestAnchor.hash && closestAnchor.hash.startsWith('#')) {
+        e.preventDefault();
+        
+        const targetId = closestAnchor.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+          
+          // Update URL hash without triggering scroll
+          window.history.pushState(null, '', closestAnchor.hash);
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
+  }, []);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+return (
     <>
-      <Hero />
-      <Footer />
-      <Event />
+      {isLoading ? (
+        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+      ) : (
+        <div className="min-h-screen bg-slate-50">
+          <SideNavigation />
+          
+          <main>
+            <DigitalSwag />
+            <AboutSection/>
+            <Tracks />
+            <PrizePool />
+            <Sponsors />
+            <FAQ />
+          </main>        
+        </div>
+      )}
     </>
   );
 }
+
+export default App;
+
+
