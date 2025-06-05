@@ -49,7 +49,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         backgroundPosition: 'center'
       }}
     >
-      <div className="font-mono text-xl md:text-2xl text-white space-y-6">
+      <div className="font-mono text-xl md:text-5xl text-white space-y-6">
         <div className={`
           transition-all duration-1000
           ${showFirstLine ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}

@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const faqs = [
   {
-    question: "Can we use a project we've already started or must it be built from scratch?",
+    question: "Can we use existing projects ?",
     answer:
       "All projects must be built from scratch during the hackathon to ensure fairness. Pre-existing code is not allowed unless it's open-source and available to everyone.",
   },
@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     question: 'Do I need a team?',
-    answer: 'You can participate solo or in a team of up to 4 members. We encourage team participation as it enhances the collaborative experience, but solo hackers are equally welcome. We\'ll also have team formation activities to help you find teammates!'
+    answer: 'You can participate solo or in a team of up to 4 members. We encourage team participation as it enhances the collaborative experience, but solo hackers are equally welcome.'
   },
   {
     question: 'Is there any fee?',
-    answer: 'No, participation in CTB Season 2 is completely free! However, registration is required as seats are limited.'
+    answer: 'No, participation in CTB Season 2 is completely free! However, registration is required as seats are limited. Your personal expanses like travel, accommodation, etc. will not be covered '
   },
   {
     question: 'Will travel be covered?',
@@ -44,11 +44,7 @@ const faqs = [
   },
   {
     question: 'How much experience do I need?',
-    answer: 'All experience levels are welcome! Whether you\'re a beginner or an expert, we have tracks, workshops, and mentors to support your journey.'
-  },
-  {
-    question: 'Can I start working on my project before the event?',
-    answer: 'No, all projects must be built from scratch during the hackathon. You can brainstorm ideas and form teams beforehand, but coding or building must begin only at the start of the event.'
+    answer: 'All experience levels are welcome! Whether you\'re a beginner or an expert, we have tracks, workshops, and mentors to support your journey. For any help you can reach out us .'
   }
 ];
 
