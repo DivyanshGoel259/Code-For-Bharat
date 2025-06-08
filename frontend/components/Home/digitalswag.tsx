@@ -133,11 +133,11 @@ const redAreaHeight = 500;
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white font-mono tracking-wider">
+          <h1 className="mt-10 text-5xl font-bold text-white font-mono tracking-wider">
             DIGITAL SWAG
           </h1>
 
-        <div className="flex flex-col md:flex-row gap-8 items-center">
+        <div className="flex flex-col md:flex-row gap-8 items-center justify-center mt-14">
           {/* Preview */}
           <div className="w-full md:w-1/3 aspect-square bg-[#1a0f0f] rounded-lg overflow-hidden shadow-2xl">
             <canvas

@@ -24,7 +24,7 @@ export const Team = () => {
             <TeamCard
               key={payload.id}
               imageUrl={payload.imageUrl}
-              information={payload.information}
+              linkedin_Url={payload.linkedin_Url}
               name={payload.name}
             />
           ))}
@@ -48,7 +48,7 @@ export const Team = () => {
             <TeamCard
               key={payload.id}
               imageUrl={payload.imageUrl}
-              information={payload.information}
+              linkedin_Url={payload.linkedin_Url}
               name={payload.name}
             />
           ))}

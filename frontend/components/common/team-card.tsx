@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 interface TeamCardArgs {
   imageUrl: string;
   name: string;
-  information: string;
+  linkedin_Url: string;
 }
 
-export const TeamCard = ({ imageUrl, name, information }: TeamCardArgs) => {
+export const TeamCard = ({ imageUrl, name, linkedin_Url }: TeamCardArgs) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -24,9 +24,9 @@ export const TeamCard = ({ imageUrl, name, information }: TeamCardArgs) => {
           {name}
         </div>
         <div className="w-24 h-[0.1rem] bg-black" />
-        <div className="mt-1 w-40 font-zendots font-bold text-center text-black text-xs">
-          {information}
-        </div>
+        <a href={linkedin_Url} target="_blank" className=" text-white mt-1 w-40 font-zendots font-bold text-center text-black text-sm hover:text-blue-700">
+          Linkedin
+        </a>
       </div>
     </motion.div>
   );

@@ -79,7 +79,7 @@ const Timeline: React.FC = () => {
               }`}
               style={{
                 backgroundColor: "#D2401E",
-                width: "180px",
+                width: "200px",
                 marginLeft: item.side === "left" ? "0" : "calc(50% + 20px)",
                 marginRight: item.side === "right" ? "0" : "calc(50% + 20px)",
               }}
