@@ -9,8 +9,24 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+export default [
+  // Use Next.js recommended config
+  ...compat.extends("next/core-web-vitals", "next", "next/typescript"),
 
-export default eslintConfig;
+  {
+    rules: {
+      // ✅ Disable image warning (you accept performance hit from <img>)
+      "@next/next/no-img-element": "off",
+
+      // ✅ Allow unused variables (only for local dev)
+      "@typescript-eslint/no-unused-vars": "off",
+
+      // ✅ Allow console statements for debugging
+      "no-console": "off",
+
+      // ✅ You can add more relaxed rules here
+      "react/display-name": "off",
+      "react-hooks/exhaustive-deps": "warn",
+    },
+  },
+];
