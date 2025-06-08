@@ -195,8 +195,8 @@ const formatTime = (time: number): string => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
         {/* Main Title */}
         <div className="text-center mb-12">
-          <h1 
-            className="text-6xl md:text-8xl lg:text-9xl mb-6 leading-tight"
+          <img src={'https://res.cloudinary.com/dpam4vkbx/image/upload/v1749363037/CODE_FOR_BHARAT_xonpxa.png'} alt='code for bharat'
+            className="p-2 w-[60rem] h-[10rem] mb-6 leading-tight"
             style={{ 
               color: '#f5f5dc',
               fontFamily: '"Playfair Display", "Samarkan", "Georgia", serif',
@@ -204,8 +204,8 @@ const formatTime = (time: number): string => {
               fontStyle: 'normal'
             }}
           >
-            code for bharat
-          </h1>
+            
+          </img>
           <div className="flex justify-center space-x-6 md:space-x-8 text-3xl md:text-4xl font-bold tracking-widest">
             {['S', 'E', 'A', 'S', 'O', 'N', '2'].map((letter, index) => (
               <span 
