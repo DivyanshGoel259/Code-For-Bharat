@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { ArrowUp, Twitter, Instagram, Linkedin, Phone, Send } from 'lucide-react';
+import { ArrowUp, Twitter, Instagram, Linkedin, LucideGlobe } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -41,27 +41,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:scale-110 transition-transform duration-300" aria-label="Twitter">
+              <a href="https://x.com/TechMastersorg" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300" aria-label="Twitter">
                 <Twitter className="w-8 h-8 text-black fill-current" />
               </a>
-              <a href="#" className="hover:scale-110 transition-transform duration-300" aria-label="Instagram">
+              <a href="https://www.instagram.com/techmasters.india/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300" aria-label="Instagram">
                 <Instagram className="w-8 h-8 text-black" />
               </a>
-              <a href="#" className="hover:scale-110 transition-transform duration-300" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/techmasters-community/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300" aria-label="LinkedIn">
                 <Linkedin className="w-8 h-8 text-black fill-current" />
               </a>
-              <a href="#" className="hover:scale-110 transition-transform duration-300" aria-label="Phone">
-                <Phone className="w-8 h-8 text-black" />
-              </a>
-              <a href="#" className="hover:scale-110 transition-transform duration-300" aria-label="Send">
-                <Send className="w-8 h-8 text-black" />
+              <a href="https://www.techmastersindia.tech/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300" aria-label="Website">
+                <LucideGlobe className="w-8 h-8 text-black" />
               </a>
             </div>
           </div>
         </div>
       </div>
 
-          </footer>
+    </footer>
   );
 };
 

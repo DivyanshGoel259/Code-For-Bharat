@@ -5,40 +5,39 @@ import { motion } from "framer-motion";
 
 const tracks = [
   {
-    name: "Devtopus",
+    name: "WEB3",
     id: 1,
     imageUrl: "https://picsum.photos/seed/devtopus1/300/300",
   },
   {
-    name: "Devtopus",
+    name: "AI/ML",
     id: 2,
     imageUrl: "https://picsum.photos/seed/devtopus2/300/300",
   },
   {
-    name: "Devtopus",
+    name: "HEALTHCARE",
     id: 3,
     imageUrl: "https://picsum.photos/seed/devtopus3/300/300",
   },
   {
-    name: "Devtopus",
+    name: "EDTECH",
     id: 4,
     imageUrl: "https://picsum.photos/seed/devtopus4/300/300",
   },
   {
-    name: "Devtopus",
+    name: "FINTECH",
     id: 5,
     imageUrl: "https://picsum.photos/seed/devtopus5/300/300",
   },
   {
-    name: "Devtopus",
+    name: "OPEN INNOVATION",
     id: 6,
-    imageUrl: "https://picsum.photos/seed/devtopus5/300/300",
+    imageUrl: "https://picsum.photos/seed/devtopus6/300/300",
   },
 ];
 
 export const Tracks = () => {
   const [track, setTrack] = useState({ id: 0, isOpen: false });
-
 
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
@@ -62,8 +61,8 @@ export const Tracks = () => {
               onMouseEnter={() => {
                 setTrack({ id: payload.id, isOpen: true });
               }}
-              onMouseLeave={()=>{
-                  setTrack({ ...track, isOpen: false })
+              onMouseLeave={() => {
+                setTrack({ ...track, isOpen: false });
               }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

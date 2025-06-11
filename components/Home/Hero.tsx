@@ -280,7 +280,8 @@ const formatTime = (time: number): string => {
               color: '#000000'
             }}
           >
-            REGISTER NOW
+            <span className="block">REGISTER</span>
+            <span className="block">NOW</span>
           </button>
           <button 
             className="font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
@@ -289,7 +290,8 @@ const formatTime = (time: number): string => {
               color: '#000000'
             }}
           >
-            JOIN OUR COMMUNITY
+            <span className="block">JOIN OUR</span>
+            <span className="block">COMMUNITY</span>
           </button>
         </div>
 

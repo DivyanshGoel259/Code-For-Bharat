@@ -38,9 +38,7 @@ export const AboutSection = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="font-zendots font-medium text-sm max-w-md text-center text-white mt-2 p-3"
       >
-        Code for Bharat is a student-driven hackathon that brings tech
-        enthusiasts together to innovate, collaborate, and real-world solutions
-        in a limited time.
+        Code For Bharat is a student-driven hackathon initiative by Tech Masters India that brings together tech enthusiasts, developers, and young entrepreneurs from across the country to innovate, collaborate, and solve real-world challenges within a limited timeframe. It’s more than just a hackathon—it’s a movement to harness the power of technology for meaningful change.
       </motion.div>
 
       {/* Stats Section */}

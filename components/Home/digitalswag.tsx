@@ -146,21 +146,22 @@ const DigitalSwag: React.FC = () => {
           {/* Controls */}
           <div className="w-full md:w-1/2 lg:w-1/3 space-y-6">
           <div className="max-w-2xl mx-auto text-gray-300 space-y-4 mb-8">
-            <p className="text-lg">
-              Introducing the CFB Digital Badge!
-            </p>
-            <p>
-              Celebrate your membership in the International Hackathon Community with exclusive CFB Digital Badge. Follow these steps:
-            </p>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Enter your name</li>
-              <li>Upload your photo</li>
-              <li>Download your Badge</li>
-            </ul>
-            <p className="text-sm italic mt-4">
-              *Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
-            </p>
-          </div>
+  <p className="text-lg">
+    We appreciate your participation in Code For Bharat Season 2! For all of you, we have a gift 🎁—this season’s Digital Swag. You can download it, post it on your socials, and don’t forget to tag us. There is a special gift 🎁 for you!
+  </p>
+  <ul className="list-disc list-inside space-y-2">
+    <li>Enter your name</li>
+    <li>Upload your photo</li>
+    <li>Download your Digital Swag</li>
+    <li>Share it on social media and tag us for special gift! 🎁</li>
+  </ul>
+  <p className="text-orange-400 font-semibold mt-2">
+  Special gift 🎁 for some lucky hackers—announcement soon!
+</p>
+  <p className="text-sm italic mt-4">
+    *Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
+  </p>
+</div>
             <div>
               <label className="block text-gray-300 text-sm mb-2">
                 Enter your Name:
