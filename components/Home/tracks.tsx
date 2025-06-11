@@ -7,32 +7,32 @@ const tracks = [
   {
     name: "WEB3",
     id: 1,
-    imageUrl: "https://picsum.photos/seed/devtopus1/300/300",
+    imageUrl: "https://i.pinimg.com/736x/00/4b/22/004b22b901be85ea17153793942ab82a.jpg",
   },
   {
     name: "AI/ML",
     id: 2,
-    imageUrl: "https://picsum.photos/seed/devtopus2/300/300",
+    imageUrl: "https://i.pinimg.com/736x/bf/df/34/bfdf347941e0c16abe5a72fdbdd46075.jpg",
   },
   {
     name: "HEALTHCARE",
     id: 3,
-    imageUrl: "https://picsum.photos/seed/devtopus3/300/300",
+    imageUrl: "https://i.pinimg.com/736x/0f/78/61/0f78610131f53fa273b520e738d1539e.jpg",
   },
   {
     name: "EDTECH",
     id: 4,
-    imageUrl: "https://picsum.photos/seed/devtopus4/300/300",
+    imageUrl: "https://i.pinimg.com/736x/04/1c/5d/041c5db7ddba929d535e1f419904addc.jpg",
   },
   {
     name: "FINTECH",
     id: 5,
-    imageUrl: "https://picsum.photos/seed/devtopus5/300/300",
+    imageUrl: "https://i.pinimg.com/736x/31/3d/b5/313db5299dc1fcd438c1f1439238ef6d.jpg",
   },
   {
     name: "OPEN INNOVATION",
     id: 6,
-    imageUrl: "https://picsum.photos/seed/devtopus6/300/300",
+    imageUrl: "https://i.pinimg.com/736x/cb/f1/0d/cbf10dd3f4200d2853f5f51519554f68.jpg",
   },
 ];
 

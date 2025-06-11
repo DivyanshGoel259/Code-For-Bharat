@@ -5,54 +5,57 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const faqs = [
   {
-    question: "Can we use existing projects ?",
+    question: "Can we use existing projects?",
     answer:
-      "All projects must be built from scratch during the hackathon to ensure fairness. Pre-existing code is not allowed unless it's open-source and available to everyone.",
+      "No, all projects must be created from scratch during the hackathon to ensure a fair competition. You’re welcome to use open-source tools or public APIs, but reusing full pre-built projects is not allowed.",
   },
   {
     question: "Who can participate?",
     answer:
-      "CTB Season 2 is open to students, professionals, and anyone with a passion for technology. Participants from all backgrounds and skill levels are welcome!",
+      "Code For Bharat Season 2 is open to all students across India. Whether you come from a technical or non-technical background, if you're passionate about solving real-world problems, you’re invited to join!",
   },
   {
-    question: 'Do I need a team?',
-    answer: 'You can participate solo or in a team of up to 4 members. We encourage team participation as it enhances the collaborative experience, but solo hackers are equally welcome.'
+    question: "Do I need a team?",
+    answer:
+      "You can participate individually or in a team of up to 4 members. Teams can include students from different colleges. If you're solo, don’t worry — you'll have chances to connect and collaborate with others.",
   },
   {
-    question: 'Is there any fee?',
-    answer: 'No, participation in CTB Season 2 is completely free! However, registration is required as seats are limited. Your personal expanses like travel, accommodation, etc. will not be covered '
+    question: "Is there any fee?",
+    answer:
+      "No, participation is completely free! But make sure to register soon — seats are limited and filling up fast.",
   },
   {
     question: "Will travel be covered?",
     answer:
-      "We offer travel reimbursements for selected participants from outside Jaipur, up to a certain limit. Details will be shared with registered participants.",
+      "Travel and accommodation will not be provided. Since Code For Bharat is a community-driven initiative without major funding, we’re unable to cover participant travel or lodging expenses.",
   },
   {
-    question: "Can I build hardware projects?",
+    question: "What are the judging criteria?",
     answer:
-      "Absolutely! We have a dedicated hardware track, and we'll provide access to various hardware components and tools. If you need specific hardware, please mention it during registration.",
-  },
-  {
-    id: "faq6",
-    question: "What's the judging criteria?",
-    answer:
-      "Projects will be judged based on innovation, technical complexity, user experience, practicality, and presentation. Each track may have additional specific criteria.",
+      "Projects will be judged based on several important factors: innovation, problem relevance, technical implementation, user experience, impact potential, and the strength of your MVP (Minimum Viable Product).",
   },
   {
     question: "What should I bring?",
     answer:
-      "Bring your laptop, charger, any personal hardware you want to work with, and a valid ID. We'll provide food, beverages, workspace, and a comfortable environment for hacking.",
+      "For the offline round, please bring your laptop, charger, a valid ID, and any hardware you plan to use. We’ll provide a workspace, internet, and everything else you need to stay focused and comfortable.",
+  },
+  {
+    question: "Can I build hardware projects?",
+    answer:
+      "Yes, we welcome hardware-based projects! There's a dedicated track for them. Just make sure you bring the necessary components and tools with you, and mention any special requirements during registration.",
   },
   {
     question: "Will there be food?",
     answer:
-      "Yes! We'll provide meals, snacks, and beverages throughout the 36-hour hackathon. We cater to various dietary preferences, which you can specify during registration.",
+      "Yes, meals, snacks, and beverages will be provided to all offline participants throughout the hackathon.",
   },
   {
-    question: 'How much experience do I need?',
-    answer: 'All experience levels are welcome! Whether you\'re a beginner or an expert, we have tracks, workshops, and mentors to support your journey. For any help you can reach out us .'
+    question: "Do I need prior experience?",
+    answer:
+      "Not at all. Whether you’re a beginner or an experienced builder, there will be workshops, mentors, and a supportive environment to help you learn and grow during this hybrid hackathon.",
   }
 ];
+
 
 const FAQ = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -30,7 +30,13 @@ const PrizePool: React.FC = () => {
           delay={200}
           className="max-w-2xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl py-12 shadow-2xl shadow-orange-500/20 text-center">
+          <div
+            className="rounded-2xl py-12 text-center shadow-2xl"
+            style={{
+              backgroundColor: "#e9451f",
+              boxShadow: "0 10px 25px 0 #e9451f33", // 20% opacity
+            }}
+          >
             <div className="text-5xl md:text-7xl font-bold font-mono text-white flex items-center justify-center">
               <span className="text-4xl md:text-6xl align-top">$</span>
               <AnimatedCounter end={2000} />
@@ -51,7 +57,11 @@ const PrizePool: React.FC = () => {
         >
           <a
             href="#register"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105"
+            className="inline-flex items-center px-8 py-3 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+            style={{
+              background: "#e9451f",
+              boxShadow: "0 4px 20px 0 #e9451f40", // 25% opacity
+            }}
           >
             Register Now
           </a>
