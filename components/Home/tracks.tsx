@@ -29,6 +29,11 @@ const tracks = [
     id: 5,
     imageUrl: "https://picsum.photos/seed/devtopus5/300/300",
   },
+  {
+    name: "Devtopus",
+    id: 6,
+    imageUrl: "https://picsum.photos/seed/devtopus5/300/300",
+  },
 ];
 
 export const Tracks = () => {
