@@ -80,12 +80,7 @@ const FAQ = () => {
       id="faq"
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-100"
-        style={{
-          backgroundImage: "url('/background.png')",
-        }}
-      />
+      
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
