@@ -195,22 +195,22 @@ const formatTime = (time: number): string => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
         {/* Main Title */}
         <div className="text-center mb-12">
-          <img src={'https://res.cloudinary.com/dpam4vkbx/image/upload/v1749363037/CODE_FOR_BHARAT_xonpxa.png'} alt='code for bharat'
-            className="p-2 w-[60rem] h-[10rem] mb-6 leading-tight"
-            style={{ 
+          <img
+            src={'https://res.cloudinary.com/dpam4vkbx/image/upload/v1749363037/CODE_FOR_BHARAT_xonpxa.png'}
+            alt='code for bharat'
+            className="p-2 w-[57rem] h-[9.5rem] mb-6 leading-tight"
+            style={{
               color: '#f5f5dc',
               fontFamily: '"Playfair Display", "Samarkan", "Georgia", serif',
               fontWeight: '400',
               fontStyle: 'normal'
             }}
-          >
-            
-          </img>
+          />
           <div className="flex justify-center space-x-6 md:space-x-8 text-3xl md:text-4xl font-bold tracking-widest">
             {['S', 'E', 'A', 'S', 'O', 'N', '2'].map((letter, index) => (
-              <span 
-                key={index} 
-                style={{ 
+              <span
+                key={index}
+                style={{
                   color: '#ff5722',
                   fontFamily: '"Inter", "Samarkan", sans-serif',
                   fontWeight: '700'
@@ -272,27 +272,33 @@ const formatTime = (time: number): string => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-20">
-          <button 
+        <div className="flex flex-col sm:flex-row gap-6 mb-15 md:gap-8">
+          <a
+            href="https://unstop.com/o/OnPq493?lb=xd2naq5Q&utm_medium=Share&utm_source=shortUrl"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            style={{ 
+            style={{
               backgroundColor: '#ff5722',
               color: '#000000'
             }}
           >
             <span className="block">REGISTER</span>
             <span className="block">NOW</span>
-          </button>
-          <button 
+          </a>
+          <a
+            href="https://chat.whatsapp.com/FnTFfk7P0GPII8JjndnReR"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            style={{ 
+            style={{
               backgroundColor: '#ffffff',
               color: '#000000'
             }}
           >
             <span className="block">JOIN OUR</span>
             <span className="block">COMMUNITY</span>
-          </button>
+          </a>
         </div>
 
         {/* Scroll Down Indicator */}

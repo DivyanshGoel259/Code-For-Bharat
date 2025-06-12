@@ -21,13 +21,9 @@ const sponsorCategories: SponsorCategory[] = [
       {
         id: 'org1',
         name: 'Organization 1',
-        image: 'https://placehold.co/400x200/333/FF4500?text=Organizer+1'
+        image: '/tmi.png'
       },
-      {
-        id: 'org2',
-        name: 'Organization 2',
-        image: 'https://placehold.co/400x200/333/FF4500?text=Organizer+2'
-      }
+
     ]
   },
   {
@@ -37,13 +33,13 @@ const sponsorCategories: SponsorCategory[] = [
       {
         id: 'power1',
         name: 'Power Sponsor',
-        image: 'https://placehold.co/400x200/333/FF4500?text=Powered+By'
+        image: 'https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/Unstop-Logo-Blue-Large.jpg'
       }
     ]
   },
   {
-    id: 'platinum',
-    name: 'Platinum',
+    id: 'Sponsor',
+    name: 'Sponsor',
     sponsors: [
       {
         id: 'plat1',
@@ -87,19 +83,17 @@ const Sponsors: React.FC = () => {
             <h3 className="text-2xl text-orange-500 text-center mb-8 font-mono">
               {sponsorCategories[0].name}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {sponsorCategories[0].sponsors.map(sponsor => (
-<div
-  key={sponsor.id}
-  className="aspect-[3/2] border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20 hover:translate-y-[-5px]"
->
-  <img
-    src={sponsor.image}
-    alt={sponsor.name}
-    className="w-full h-full object-cover"
-  />
-</div>
-              ))}
+            <div className="flex justify-center">
+              <div
+                key={sponsorCategories[0].sponsors[0].id}
+                className="aspect-[5/3] w-full max-w-md border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20 hover:translate-y-[-5px]"
+              >
+                <img
+                  src={sponsorCategories[0].sponsors[0].image}
+                  alt={sponsorCategories[0].sponsors[0].name}
+                  className="w-full h-full object-contain bg-[#333333]"
+                />
+              </div>
             </div>
           </AnimatedSection>
 
@@ -108,14 +102,14 @@ const Sponsors: React.FC = () => {
             <h3 className="text-2xl text-orange-500 text-center mb-8 font-mono">
               {sponsorCategories[1].name}
             </h3>
-            <div className="max-w-2xl mx-auto">
+            <div className="flex justify-center">
               <div
-                className="aspect-[2/1] border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20"
+                className="aspect-[5/3] w-full max-w-md border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20"
               >
                 <img
                   src={sponsorCategories[1].sponsors[0].image}
                   alt={sponsorCategories[1].sponsors[0].name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
@@ -156,8 +150,10 @@ const Sponsors: React.FC = () => {
           {/* Sponsor Us Button */}
           <AnimatedSection variant="fade-up" delay={500} className="text-center">
             <a
-              href="mailto:sponsors@example.com"
-              className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-orange-500 text-white font-mono rounded-full transition-all duration-300 hover:bg-orange-500/10 hover:shadow-lg hover:shadow-orange-500/20"
+              href="https://forms.gle/pFt1NqdV1wN1Yo759"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-3 bg-orange-500 border-2 border-orange-500 text-white font-mono rounded-full transition-all duration-300 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/20"
             >
               Sponsor Us
             </a>

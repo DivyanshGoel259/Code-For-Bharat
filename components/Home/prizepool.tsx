@@ -56,7 +56,9 @@ const PrizePool: React.FC = () => {
           className="mt-16 text-center"
         >
           <a
-            href="#register"
+            href="https://unstop.com/hackathons/code-for-bharat-season-2-hackathon-tech-masters-india-1480301"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-3 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
             style={{
               background: "#e9451f",
