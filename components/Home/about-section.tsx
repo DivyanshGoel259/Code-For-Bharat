@@ -17,19 +17,9 @@ export const AboutSection = () => {
   const secondRow = items.slice(items.length / 2);
 
   return (
-    <div id='about' className="font-Hagrid overflow-hidden bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center">
-      
-      {/* Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        className="tracking-widest font-bold text-4xl text-center text-white p-3 mt-4"
-      >
-        ABOUT US
-      </motion.div>
+    <div id='about' className="font-Hagrid overflow-hidden bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center py-10 px-4">
 
+<<<<<<< HEAD
       {/* Subheading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -91,21 +81,91 @@ export const AboutSection = () => {
           titleSize={"text-4xl"}
         />
       </motion.div>
+=======
+  {/* Heading */}
+  <motion.div
+    initial={{ opacity: 0, y: -30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.5 }}
+    transition={{ duration: 0.5 }}
+    className="tracking-widest font-bold text-4xl md:text-5xl lg:text-6xl text-center text-white p-3 mt-4"
+  >
+    ABOUT US
+  </motion.div>
 
-      {/* Marquee Carousel */}
-      <div className="mt-8">
-        <Marquee className="[--duration:15s]">
-          {firstRow.map((payload, index) => (
-            <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
-          ))}
-        </Marquee>
-        <Marquee reverse className="mt-3 [--duration:15s]">
-          {secondRow.map((payload, index) => (
-            <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
-          ))}
-        </Marquee>
-      </div>
-    </div>
+  {/* Subheading */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.5 }}
+    transition={{ duration: 0.5, delay: 0.2 }}
+    className="font-zendots font-medium text-base md:text-lg lg:text-xl text-white text-center mt-4 max-w-xl md:max-w-2xl lg:max-w-4xl leading-relaxed px-2"
+  >
+    Code For Bharat is a student-driven hackathon initiative by Tech Masters India that brings together tech enthusiasts, developers, and young entrepreneurs from across the country to innovate, collaborate, and solve real-world challenges within a limited timeframe. It’s more than just a hackathon—it’s a movement to harness the power of technology for meaningful change.
+  </motion.div>
+
+  {/* Stats Section */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.5 }}
+    transition={{ duration: 0.6, delay: 0.3 }}
+    className="flex gap-10 mt-8 flex-wrap justify-center"
+  >
+    <IconCard
+      icon={ClipBoardIcon}
+      iconColor="text-[#c04123]"
+      iconText="Entries"
+      iconTextSize="text-xl md:text-2xl"
+      title="3K+"
+      titleColor="text-white"
+      titleSize="text-5xl md:text-6xl"
+    />
+    <IconCard
+      icon={FolderIcon}
+      iconColor="text-[#c04123]"
+      iconText="Projects"
+      iconTextSize="text-xl md:text-2xl"
+      title="500+"
+      titleColor="text-white"
+      titleSize="text-5xl md:text-6xl"
+    />
+    <IconCard
+      icon={BuildingIcon}
+      iconColor="text-[#c04123]"
+      iconText="Colleges"
+      iconTextSize="text-xl md:text-2xl"
+      title="75+"
+      titleColor="text-white"
+      titleSize="text-5xl md:text-6xl"
+    />
+    <IconCard
+      icon={LocationIcon}
+      iconColor="text-[#c04123]"
+      iconText="Cities"
+      iconTextSize="text-xl md:text-2xl"
+      title="120+"
+      titleColor="text-white"
+      titleSize="text-5xl md:text-6xl"
+    />
+  </motion.div>
+
+  {/* Marquee */}
+  <div className="mt-10 w-full">
+    <Marquee className="[--duration:15s]">
+      {firstRow.map((payload, index) => (
+        <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
+      ))}
+    </Marquee>
+    <Marquee reverse className="mt-3 [--duration:15s]">
+      {secondRow.map((payload, index) => (
+        <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
+      ))}
+    </Marquee>
+  </div>
+</div>
+>>>>>>> 2f19aaa71c9b44d5e27cf068bc1e404fbe5d01f8
+
   );
 };
 
