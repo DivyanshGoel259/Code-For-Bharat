@@ -36,7 +36,12 @@ export const AboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="font-zendots font-medium text-sm max-w-md text-center text-white mt-2 p-3"
+        className="font-hagrid-extrabold text-2xl max-w-3xl text-justify text-white mt-4 p-4"
+        style={{
+          fontFamily: "'Hagrid-Text-Extrabold-trial', serif",
+          fontWeight: 800,
+          lineHeight: 1.6,
+        }}
       >
         Code For Bharat is a student-driven hackathon initiative by Tech Masters India that brings together tech enthusiasts, developers, and young entrepreneurs from across the country to innovate, collaborate, and solve real-world challenges within a limited timeframe. It’s more than just a hackathon—it’s a movement to harness the power of technology for meaningful change.
       </motion.div>
@@ -54,7 +59,7 @@ export const AboutSection = () => {
           iconColor={"text-[#c04123]"}
           iconText={"Entries"}
           iconTextSize={"text-lg"}
-          title={"3K+"}
+          title={"1.5K+"}
           titleColor={"text-white"}
           titleSize={"text-4xl"}
         />
@@ -63,7 +68,7 @@ export const AboutSection = () => {
           iconColor={"text-[#c04123]"}
           iconText={"Projects"}
           iconTextSize={"text-lg"}
-          title={"500+"}
+          title={"135+"}
           titleColor={"text-white"}
           titleSize={"text-4xl"}
         />
