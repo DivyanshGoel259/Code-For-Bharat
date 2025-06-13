@@ -122,11 +122,13 @@ const DigitalSwag: React.FC = () => {
     <div id="swag" className="min-h-screen flex items-center justify-center relative pt-20">
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white font-mono tracking-wider mb-6">
+        <div className="text-center mb-12 mt-[-1.5rem]">
+          <h1
+            className="text-5xl font-bold text-white tracking-wider mb-4"
+            style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
+          >
             DIGITAL SWAG
           </h1>
-          
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
@@ -140,21 +142,33 @@ const DigitalSwag: React.FC = () => {
 
           {/* Controls */}
           <div className="w-full md:w-1/2 lg:w-1/3 space-y-6">
-          <div className="max-w-2xl mx-auto text-gray-300 space-y-4 mb-8">
-  <p className="text-lg">
+          <div className="max-w-2xl mx-auto text-gray-300 space-y-3 mb-6">
+  <p
+    className="text-xs"
+    style={{ fontFamily: "Zendots, monospace" }}
+  >
     We appreciate your participation in Code For Bharat Season 2! For all of you, we have a gift 🎁—this season’s Digital Swag. You can download it, post it on your socials, and don’t forget to tag us. There is a special gift 🎁 for you!
   </p>
-  <ul className="list-disc list-inside space-y-2">
+  <ul
+    className="list-disc list-inside space-y-1"
+    style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
+  >
     <li>Enter your name</li>
     <li>Upload your photo</li>
     <li>Download your Digital Swag</li>
     <li>Share it on social media and tag us for special gift! 🎁</li>
   </ul>
-  <p className="text-orange-400 font-semibold mt-2">
-  Special gift 🎁 for some lucky hackers—announcement soon!
-</p>
-  <p className="text-sm italic mt-4">
-    *Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
+  <p
+    className="text-orange-400 font-semibold mt-2"
+    style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
+  >
+    Special gift 🎁 for some lucky hackers—announcement soon!
+  </p>
+  <p
+    className="text-xs italic mt-3"
+    style={{ fontFamily: "Zendots, monospace" }}
+  >
+    Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
   </p>
 </div>
             <div>

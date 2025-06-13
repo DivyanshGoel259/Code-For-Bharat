@@ -4,20 +4,18 @@ import { ArrowUp, Twitter, Instagram, Linkedin, LucideGlobe } from 'lucide-react
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-orange-500 to-red-600 text-black ">
+    <footer className="relative bg-gradient-to-b from-orange-500 to-red-600 text-black "
+      style={{ fontFamily: 'Zendots, monospace' }} // Apply Zendots font
+    >
       {/* Main Footer Content */}
       <div className="relative z-10 px-8 py-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
           {/* Logo and Organizing Body */}
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-black flex items-center justify-center">
-              <div className="w-8 h-8 border-2 border-white transform rotate-45"></div>
-            </div>
+          <div className="flex items-start space-x-4 md:ml-24">
             <div>
               <h2 className="text-xl font-bold">TECH MASTERS</h2>
               <h3 className="text-lg font-semibold">INDIA</h3>
-              <p className="text-sm mt-1">Organizing body</p>
             </div>
           </div>
           {/* Stay Connected */}

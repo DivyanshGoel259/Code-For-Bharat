@@ -229,7 +229,7 @@ const formatTime = (time: number): string => {
             style={{ 
               color: '#ffffff', 
               letterSpacing: '0.3em',
-              fontFamily: '"Inter", "Helvetica Neue", sans-serif',
+              fontFamily: 'Zendots, monospace', // Changed to Zendots font
               fontWeight: '600'
             }}
           >
@@ -237,72 +237,96 @@ const formatTime = (time: number): string => {
           </h2>
           
           {/* Countdown Timer */}
-          <div className="flex justify-center space-x-4 mb-16">
+          <div className="flex justify-center items-center space-x-0 mb-16">
             {[
               { label: 'DAYS', value: formatTime(timeLeft.days) },
               { label: 'HOURS', value: formatTime(timeLeft.hours) },
               { label: 'MINS', value: formatTime(timeLeft.minutes) },
               { label: 'SECS', value: formatTime(timeLeft.seconds) }
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div 
-                  className="rounded-2xl border px-8 py-12 min-w-[120px] mb-3"
-                  style={{ 
-                    background: 'linear-gradient(145deg, #2a2a2a, #1a1a1a)',
-                    borderColor: '#444444',
-                    boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)'
-                  }}
-                >
-                  <div 
-                    className="text-4xl md:text-5xl font-bold"
-                    style={{ color: '#ffffff' }}
+            ].map((item, index, arr) => (
+              <React.Fragment key={index}>
+                <div className="flex flex-col items-center">
+                  <div
+                    className="rounded-2xl border px-8 py-12 mb-3"
+                    style={{
+                      width: "120px", // Fixed width
+                      minWidth: "120px",
+                      maxWidth: "120px",
+                      height: "120px", // Fixed height
+                      minHeight: "120px",
+                      maxHeight: "120px",
+                      background: 'linear-gradient(145deg, #2a2a2a, #1a1a1a)',
+                      borderColor: '#444444',
+                      boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
                   >
-                    {item.value}
+                    <div
+                      className="text-4xl md:text-5xl font-bold"
+                      style={{ color: '#ffffff', fontFamily: 'Zendots, monospace' }}
+                    >
+                      {item.value}
+                    </div>
+                  </div>
+                  <div
+                    className="text-sm font-semibold tracking-wider"
+                    style={{ color: '#888888', fontFamily: 'Zendots, monospace' }}
+                  >
+                    {item.label}
                   </div>
                 </div>
-                <div 
-                  className="text-sm font-semibold tracking-wider"
-                  style={{ color: '#888888' }}
-                >
-                  {item.label}
-                </div>
-              </div>
+                {/* Add colon between boxes except after the last one */}
+                {index < arr.length - 1 && (
+                  <span
+                    className="text-5xl md:text-6xl font-bold mx-2 mb-10"
+                    style={{ color: '#ff5722', fontFamily: 'Zendots, monospace', userSelect: 'none' }}
+                  >
+                    :
+                  </span>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-15 md:gap-8">
-          <a
-            href="https://unstop.com/o/OnPq493?lb=xd2naq5Q&utm_medium=Share&utm_source=shortUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            style={{
-              backgroundColor: '#ff5722',
-              color: '#000000'
-            }}
-          >
-            <span className="block">REGISTER</span>
-            <span className="block">NOW</span>
-          </a>
-          <a
-            href="https://chat.whatsapp.com/FnTFfk7P0GPII8JjndnReR"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold px-10 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            style={{
-              backgroundColor: '#ffffff',
-              color: '#000000'
-            }}
-          >
-            <span className="block">JOIN OUR</span>
-            <span className="block">COMMUNITY</span>
-          </a>
+        <div className="flex justify-center mt-[-3.5rem] mb-10">
+          <div className="flex flex-row gap-6">
+            <a
+              href="https://unstop.com/o/OnPq493?lb=xd2naq5Q&utm_medium=Share&utm_source=shortUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold w-56 px-0 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg flex flex-col items-center justify-center"
+              style={{
+                backgroundColor: '#ff5722',
+                color: '#000000',
+                fontFamily: 'Zendots, monospace'
+              }}
+            >
+              <span className="block w-full text-center">REGISTER</span>
+              <span className="block w-full text-center">NOW</span>
+            </a>
+            <a
+              href="https://chat.whatsapp.com/FnTFfk7P0GPII8JjndnReR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold w-56 px-0 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg flex flex-col items-center justify-center"
+              style={{
+                backgroundColor: '#ffffff',
+                color: '#000000',
+                fontFamily: 'Zendots, monospace'
+              }}
+            >
+              <span className="block w-full text-center">JOIN OUR</span>
+              <span className="block w-full text-center">COMMUNITY</span>
+            </a>
+          </div>
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-6 h-6" style={{ color: '#ffffff' }} />
           <ChevronDown className="w-6 h-6 -mt-3" style={{ color: '#ffffff' }} />
         </div>

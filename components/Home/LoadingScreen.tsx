@@ -49,7 +49,12 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         backgroundPosition: 'center'
       }}
     >
-      <div className="font-mono text-xl md:text-5xl text-white space-y-6 flex flex-col items-center justify-center text-center">
+      <div
+        className="text-xl md:text-4xl text-white space-y-6 flex flex-col items-center justify-center text-center"
+        style={{
+          fontFamily: 'Zendots, monospace', // Apply Zendots font
+        }}
+      >
         <div className={`
           transition-all duration-1000
           ${showFirstLine ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
