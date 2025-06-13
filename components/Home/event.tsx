@@ -36,8 +36,7 @@ const Timeline: React.FC = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center min-h-screen py-8 px-4 flex flex-col items-center"
-      style={{ backgroundColor: "#2B2B2B" }} // prevents white flash
+      className=" min-h-screen py-8 px-4 flex flex-col items-center"
     >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

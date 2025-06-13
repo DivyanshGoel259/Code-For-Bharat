@@ -55,29 +55,35 @@ function App() {
     setIsLoading(false);
   };
 return (
-    <>
-      {isLoading ? (
-        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
-      ) : (
-        <div className="min-h-screen bg-slate-50">
+  <>
+    {isLoading ? (
+      <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+    ) : (
+      <div
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{
+          backgroundImage: "url('/background.png')",
+        }}
+      >
+        <div className="relative z-10">
           <SideNavigation />
-          
           <main>
-            <CodeForBharatLanding/>
-            <AboutSection/>
-            <DigitalSwag />          
+            <CodeForBharatLanding />
+            <AboutSection />
+            <DigitalSwag />
             <Tracks />
-            <Timeline/>
+            <Timeline />
             <PrizePool />
-            <Team/>
+            <Team />
             <Sponsors />
             <FAQ />
-            <Footer/>
-          </main>        
+            <Footer />
+          </main>
         </div>
-      )}
-    </>
-  );
+      </div>
+    )}
+  </>
+);
 }
 
 export default App;

@@ -40,7 +40,7 @@ export const Tracks = () => {
   const [track, setTrack] = useState({ id: 0, isOpen: false });
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-[url(https://res.cloudinary.com/dlauialhp/image/upload/v1748342442/background_rbg9xv.png)] bg-no-repeat bg-cover bg-center">
+    <div className="h-screen flex flex-col justify-center items-center">
       {/* Heading Animation on scroll into view */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
