@@ -61,7 +61,6 @@ export const AboutSection = () => {
           title={"1.5K+"}
           titleColor={"text-white"}
           titleSize={"text-6xl"}
-          iconSize={220}
         />
         <IconCard
           icon={FolderIcon}
@@ -71,7 +70,6 @@ export const AboutSection = () => {
           title={"135+"}
           titleColor={"text-white"}
           titleSize={"text-6xl"}
-          iconSize={220}
         />
         <IconCard
           icon={BuildingIcon}
@@ -81,7 +79,6 @@ export const AboutSection = () => {
           title={"75+"}
           titleColor={"text-white"}
           titleSize={"text-6xl"}
-          iconSize={220}
         />
         <IconCard
           icon={LocationIcon}
@@ -91,7 +88,6 @@ export const AboutSection = () => {
           title={"120+"}
           titleColor={"text-white"}
           titleSize={"text-6xl"}
-          iconSize={220}
         />
       </motion.div>
 
