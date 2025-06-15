@@ -8,52 +8,63 @@ const PrizePool: React.FC = () => {
   return (
     <section
       id="prizes"
-      className="min-h-screen  relative bg-slate-900 flex items-center justify-center overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-4 py-16 "
     >
-      {/* Background pattern */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-100"
-        style={{
-          backgroundImage: "url('/background.png')",
-        }}
-      ></div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <AnimatedSection variant="fade-up" className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wider">
+      <div className="container mx-auto text-center">
+        {/* Heading */}
+        <AnimatedSection variant="fade-up" className="mb-20 mt-[-2rem]">
+          <h2
+            className="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-white tracking-wide"
+            style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
+          >
             PRIZE POOL
           </h2>
         </AnimatedSection>
 
-        <AnimatedSection
-          variant="zoom-in"
-          delay={200}
-          className="max-w-2xl mx-auto"
-        >
-          <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl py-12 shadow-2xl shadow-orange-500/20 text-center">
-            <div className="text-5xl md:text-7xl font-bold font-mono text-white flex items-center justify-center">
-              <span className="text-4xl md:text-6xl align-top">$</span>
-              <AnimatedCounter end={2000} />
-              <span className="text-4xl md:text-6xl">+</span>
+        {/* Prize Amount Card */}
+        <AnimatedSection variant="zoom-in" delay={200} className="mx-auto">
+          <div
+            className="rounded-3xl px-10 py-14 sm:py-16 shadow-2xl hover:scale-105 transition-transform duration-300 inline-block"
+            style={{
+              backgroundColor: "#e9451f",
+              boxShadow: "0 15px 30px rgba(233, 69, 31, 0.25)",
+            }}
+          >
+            <div
+              className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white flex justify-center items-end gap-2"
+              style={{ fontFamily: "Zendots, monospace" }}
+            >
+              <span className="inline-block">$</span>
+              <span className="inline-block">
+                <AnimatedCounter end={2000} duration={2000} />
+              </span>
+              <span className="inline-block">+</span>
             </div>
           </div>
 
-          <div className="text-center mt-6">
-            <p className="text-xl md:text-2xl text-gray-300">
-              Total Prize Pool
-            </p>
-          </div>
-        </AnimatedSection>
-        <AnimatedSection
-          variant="fade-up"
-          delay={400}
-          className="mt-16 text-center"
-        >
-          <a
-            href="#register"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105"
+          <p
+            className="mt-6 text-xl sm:text-2xl text-gray-300 font-medium"
+            style={{ fontFamily: "Zendots, monospace" }}
           >
-            Register Now
+            Total Prize Pool
+          </p>
+        </AnimatedSection>
+
+        {/* Register Button */}
+        <AnimatedSection variant="fade-up" delay={400} className="mt-12">
+          <a
+            href="https://unstop.com/hackathons/code-for-bharat-season-2-hackathon-tech-masters-india-1480301"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-10 py-4 text-lg sm:text-xl text-white font-semibold rounded-full transition-transform duration-300 hover:scale-105"
+            style={{
+              background: "#e9451f",
+              boxShadow: "0 6px 25px rgba(233, 69, 31, 0.4)",
+            }}
+          >
+            <span style={{ fontFamily: "Zendots, monospace", color: "#000000" }}>
+              Register Now
+            </span>
           </a>
         </AnimatedSection>
       </div>

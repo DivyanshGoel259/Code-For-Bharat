@@ -49,22 +49,30 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
         backgroundPosition: 'center'
       }}
     >
-      <div className="font-mono text-xl md:text-5xl text-white space-y-6">
+      <div
+        className="text-xl md:text-4xl text-white space-y-6 flex flex-col items-center justify-center text-center"
+        style={{
+          fontFamily: 'Zendots, monospace', // Apply Zendots font
+        }}
+      >
         <div className={`
           transition-all duration-1000
           ${showFirstLine ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
         `}>
-          <span className="text-green-400">&gt;</span>echo &quot;They thought it was over.&quot;
+          <span className="text-white">&gt;</span>echo &quot;They thought it was over.&quot;
         </div>
         
         <div className={`
           transition-all duration-1000
           ${showSecondLine ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
+          flex justify-center
         `}>
-          <span className="text-green-400">&gt;</span>initializing_v2.0_core
-          <span className={`
-            ${showDots ? 'animate-[blink_1s_ease-in-out_3]' : 'opacity-0'}
-          `}>...</span>
+          <span className="text-white text-3xl md:text-7xl font-bold flex items-center justify-center text-center w-full">
+            &gt; initializing_v2.0_core
+            <span className={`
+              ${showDots ? 'animate-[blink_1s_ease-in-out_3]' : 'opacity-0'}
+            `}>...</span>
+          </span>
         </div>
       </div>
     </div>

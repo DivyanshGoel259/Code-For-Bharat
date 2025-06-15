@@ -120,18 +120,15 @@ const DigitalSwag: React.FC = () => {
 
   return (
     <div id="swag" className="min-h-screen flex items-center justify-center relative pt-20">
-      {/* Background */}
-      <div 
-        className="absolute inset-0 bg-[url('/background.png')] bg-cover bg-center"
-        style={{ opacity: 1 }}
-      />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white font-mono tracking-wider mb-6">
+        <div className="text-center mb-12 mt-[-1.5rem]">
+          <h1
+            className="text-6xl sm:text-7xl lg:text-7xl font-bold text-white tracking-wider mb-4"
+            style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
+          >
             DIGITAL SWAG
           </h1>
-          
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
@@ -145,24 +142,40 @@ const DigitalSwag: React.FC = () => {
 
           {/* Controls */}
           <div className="w-full md:w-1/2 lg:w-1/3 space-y-6">
-          <div className="max-w-2xl mx-auto text-gray-300 space-y-4 mb-8">
-            <p className="text-lg">
-              Introducing the CFB Digital Badge!
-            </p>
-            <p>
-              Celebrate your membership in the International Hackathon Community with exclusive CFB Digital Badge. Follow these steps:
-            </p>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Enter your name</li>
-              <li>Upload your photo</li>
-              <li>Download your Badge</li>
-            </ul>
-            <p className="text-sm italic mt-4">
-              *Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
-            </p>
-          </div>
+          <div className="max-w-2xl mx-auto text-gray-300 space-y-3 mb-6">
+  <p
+    className="text-xs"
+    style={{ fontFamily: "Zendots, monospace" }}
+  >
+    We appreciate your participation in Code For Bharat Season 2! For all of you, we have a gift 🎁—this season’s Digital Swag. You can download it, post it on your socials, and don’t forget to tag us. There is a special gift 🎁 for you!
+  </p>
+  <ul
+    className="list-disc list-inside space-y-1"
+    style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
+  >
+    <li>Enter your name</li>
+    <li>Upload your photo</li>
+    <li>Download your Digital Swag</li>
+    <li>Share it on social media and tag us for special gift! 🎁</li>
+  </ul>
+  <p
+    className="text-orange-400 font-semibold mt-2"
+    style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
+  >
+    Special gift 🎁 for some lucky hackers—announcement soon!
+  </p>
+  <p
+    className="text-xs italic mt-3"
+    style={{ fontFamily: "Zendots, monospace" }}
+  >
+    Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
+  </p>
+</div>
             <div>
-              <label className="block text-gray-300 text-sm mb-2">
+              <label
+                className="block text-gray-300 text-sm mb-2"
+                style={{ fontFamily: "Zendots, monospace" }}
+              >
                 Enter your Name:
               </label>
               <input
@@ -171,6 +184,7 @@ const DigitalSwag: React.FC = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="w-full bg-[#1a0f0f] border border-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
                 placeholder="Your name here"
+                style={{ fontFamily: "Zendots, monospace" }}
               />
             </div>
 
@@ -186,6 +200,7 @@ const DigitalSwag: React.FC = () => {
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all"
+                style={{ fontFamily: "Zendots, monospace" }}
               >
                 <Upload className="w-5 h-5" />
                 Upload Image
@@ -194,6 +209,7 @@ const DigitalSwag: React.FC = () => {
               <button
                 onClick={handleDownload}
                 className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-lg transition-all"
+                style={{ fontFamily: "Zendots, monospace" }}
               >
                 <Download className="w-5 h-5" />
                 Download Badge

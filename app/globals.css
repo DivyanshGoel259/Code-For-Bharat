@@ -159,7 +159,14 @@
 
 @font-face {
   font-family: 'Hagrid-Text-Extrabold-trial';
-  src: url('/frontend/public/fonts/Hagrid-Text-Extrabold-trial.ttf') format('truetype');
+  src: url('/fonts/Hagrid-Text-Extrabold-trial.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zendots';
+  src: url('/fonts/ZENDOTSREGULAR.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
