@@ -124,7 +124,7 @@ const DigitalSwag: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 mt-[-1.5rem]">
           <h1
-            className="text-5xl font-bold text-white tracking-wider mb-4"
+            className="text-6xl sm:text-7xl lg:text-7xl font-bold text-white tracking-wider mb-4"
             style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
           >
             DIGITAL SWAG
@@ -172,7 +172,10 @@ const DigitalSwag: React.FC = () => {
   </p>
 </div>
             <div>
-              <label className="block text-gray-300 text-sm mb-2">
+              <label
+                className="block text-gray-300 text-sm mb-2"
+                style={{ fontFamily: "Zendots, monospace" }}
+              >
                 Enter your Name:
               </label>
               <input
@@ -181,6 +184,7 @@ const DigitalSwag: React.FC = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="w-full bg-[#1a0f0f] border border-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
                 placeholder="Your name here"
+                style={{ fontFamily: "Zendots, monospace" }}
               />
             </div>
 
@@ -196,6 +200,7 @@ const DigitalSwag: React.FC = () => {
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all"
+                style={{ fontFamily: "Zendots, monospace" }}
               >
                 <Upload className="w-5 h-5" />
                 Upload Image
@@ -204,6 +209,7 @@ const DigitalSwag: React.FC = () => {
               <button
                 onClick={handleDownload}
                 className="w-full flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-lg transition-all"
+                style={{ fontFamily: "Zendots, monospace" }}
               >
                 <Download className="w-5 h-5" />
                 Download Badge

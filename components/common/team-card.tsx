@@ -44,4 +44,48 @@ export const TeamCard = ({ imageUrl, name, linkedin_Url }: TeamCardArgs) => {
       </div>
     </motion.div>
   );
-};
+}
+
+const teamCards = [
+  {
+    id: 1,
+    name: "Aaradhy gaur",
+    imageUrl: "/images/alice.jpg",
+    linkedin_Url: "https://linkedin.com/in/alicejohnson"
+  },
+  {
+    id: 2,
+    name: "Bob Smith",
+    imageUrl: "/images/bob.jpg",
+    linkedin_Url: "https://linkedin.com/in/bobsmith"
+  },
+  {
+    id: 3,
+    name: "Carol Lee",
+    imageUrl: "/images/carol.jpg",
+    linkedin_Url: "https://linkedin.com/in/carollee"
+  },
+  {
+    id: 4,
+    name: "David Kim",
+    imageUrl: "/images/david.jpg",
+    linkedin_Url: "https://linkedin.com/in/davidkim"
+  },
+  {
+    id: 5,
+    name: "Eva Patel",
+    imageUrl: "/images/eva.jpg",
+    linkedin_Url: "https://linkedin.com/in/evapatel"
+  }
+];
+
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+  {teamCards.map((payload) => (
+    <TeamCard
+      key={`organizer-${payload.id}`}
+      imageUrl={payload.imageUrl}
+      linkedin_Url={payload.linkedin_Url}
+      name={payload.name}
+    />
+  ))}
+</div>

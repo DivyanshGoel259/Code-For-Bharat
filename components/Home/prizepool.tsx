@@ -12,8 +12,11 @@ const PrizePool: React.FC = () => {
     >
       <div className="container mx-auto text-center">
         {/* Heading */}
-        <AnimatedSection variant="fade-up" className="mb-12">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-wide">
+        <AnimatedSection variant="fade-up" className="mb-20 mt-[-2rem]">
+          <h2
+            className="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-white tracking-wide"
+            style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
+          >
             PRIZE POOL
           </h2>
         </AnimatedSection>
@@ -27,14 +30,22 @@ const PrizePool: React.FC = () => {
               boxShadow: "0 15px 30px rgba(233, 69, 31, 0.25)",
             }}
           >
-            <div className="text-6xl sm:text-7xl md:text-8xl font-extrabold font-mono text-white flex justify-center items-end">
-              <span className="text-4xl md:text-5xl align-top">$</span>
-              <AnimatedCounter end={2000} />
-              <span className="text-4xl md:text-5xl">+</span>
+            <div
+              className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white flex justify-center items-end gap-2"
+              style={{ fontFamily: "Zendots, monospace" }}
+            >
+              <span className="inline-block">$</span>
+              <span className="inline-block">
+                <AnimatedCounter end={2000} duration={2000} />
+              </span>
+              <span className="inline-block">+</span>
             </div>
           </div>
 
-          <p className="mt-6 text-xl sm:text-2xl text-gray-300 font-medium">
+          <p
+            className="mt-6 text-xl sm:text-2xl text-gray-300 font-medium"
+            style={{ fontFamily: "Zendots, monospace" }}
+          >
             Total Prize Pool
           </p>
         </AnimatedSection>
@@ -51,7 +62,9 @@ const PrizePool: React.FC = () => {
               boxShadow: "0 6px 25px rgba(233, 69, 31, 0.4)",
             }}
           >
-            Register Now
+            <span style={{ fontFamily: "Zendots, monospace", color: "#000000" }}>
+              Register Now
+            </span>
           </a>
         </AnimatedSection>
       </div>
