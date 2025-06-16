@@ -58,16 +58,28 @@ export function Marquee({
         .map((_, i) => (
           <div
             key={i}
-            className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-              "animate-marquee flex-row": !vertical,
-              "animate-marquee-vertical flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-direction:reverse]": reverse,
-            })}
+            className={cn(
+              "flex shrink-0 justify-around [gap:var(--gap)]",
+              {
+                "animate-marquee flex-row": !vertical,
+                "animate-marquee-vertical flex-col": vertical,
+                "group-hover:[animation-play-state:paused]": pauseOnHover,
+              }
+            )}
+            style={reverse ? { animationDirection: "reverse" } : undefined}
           >
             {children}
           </div>
         ))}
+      <div
+        className={`flex w-max animate-marquee-reverse`}
+        style={{
+          "--duration": `40s`,
+          animationPlayState: pauseOnHover ? "paused" : "running",
+        } as React.CSSProperties}
+      >
+        {children}
+      </div>
     </div>
   );
 }

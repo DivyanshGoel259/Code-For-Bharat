@@ -39,13 +39,13 @@ export const Team = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-20"
+        className="text-center text-3xl sm:text-5xl lg:text-8xl font-bold text-white mb-20"
         style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
       >
         LEAD ORGANIZERS
       </motion.div>
 
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {teamCards.map((payload) => (
           <TeamCard
             key={`organizer-${payload.id}`}

@@ -21,9 +21,9 @@ export const AboutSection = () => {
 
       {/* Heading */}
       <motion.h2
-        className="text-5xl sm:text-6xl lg:text-7xl font-bold text-center text-white mb-2"
+        className="text-3xl sm:text-5xl lg:text-7xl font-bold text-center text-white mb-2"
         style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
-         initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -50,7 +50,7 @@ export const AboutSection = () => {
 
       {/* Stats Section */}
       <motion.div
-         initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -96,13 +96,13 @@ export const AboutSection = () => {
       </motion.div>
 
       {/* Marquee Carousel */}
-      <motion.div  className="mt-8" >
+      <motion.div className="mt-8" >
         <Marquee className="[--duration:15s]">
           {firstRow.map((payload, index) => (
             <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
           ))}
         </Marquee>
-        <Marquee reverse className="mt-3 [--duration:15s]">
+        <Marquee  reverse className="mt-3 [--duration:15s]">
           {secondRow.map((payload, index) => (
             <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
           ))}
@@ -115,10 +115,6 @@ export const AboutSection = () => {
 const CarouselCards = ({ imgUrl, name }: { imgUrl: string; name: string }) => {
   return (
     <motion.div
-       initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
       className="w-40 h-40 flex justify-center items-center border-4 border-[#e9451f] rounded-[22px] overflow-hidden" // increased size
     >
       <Image

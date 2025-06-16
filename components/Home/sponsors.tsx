@@ -63,12 +63,12 @@ const sponsorCategories: SponsorCategory[] = [
 const Sponsors: React.FC = () => {
   return (
     <section id="sponsors" className="min-h-screen flex items-center justify-center overflow-hidden py-20">
-      
-      
+
+
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection variant="fade-up" className="text-center mb-16">
           <h2
-            className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white tracking-wider"
+            className="text-3xl sm:text-5xl lg:text-8xl font-bold text-white tracking-wider"
             style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
           >
             SPONSORS
@@ -79,7 +79,7 @@ const Sponsors: React.FC = () => {
           {/* Organising Body */}
           <AnimatedSection variant="fade-up" delay={200}>
             <h3
-              className="text-2xl sm:text-3xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
+              className="text-lg sm:text-2xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
               style={{ fontFamily: "Zendots, monospace" }}
             >
               {sponsorCategories[0].name}
@@ -101,7 +101,7 @@ const Sponsors: React.FC = () => {
           {/* Powered By */}
           <AnimatedSection variant="fade-up" delay={300}>
             <h3
-              className="text-2xl sm:text-3xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
+              className="text-lg sm:text-2xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
               style={{ fontFamily: "Zendots, monospace" }}
             >
               {sponsorCategories[1].name}
@@ -122,7 +122,7 @@ const Sponsors: React.FC = () => {
           {/* Platinum */}
           <AnimatedSection variant="fade-up" delay={400}>
             <h3
-              className="text-2xl sm:text-3xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
+              className="text-lg sm:text-2xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
               style={{ fontFamily: "Zendots, monospace" }}
             >
               {sponsorCategories[2].name}

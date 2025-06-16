@@ -82,15 +82,15 @@ const FAQ = () => {
 		>
 			<div className="relative z-10 w-full max-w-5xl mx-auto px-4">
 				<div className="text-center mb-12">
-					<div className="bg-[#e9451f] inline-block px-12 py-3 rounded-full">
-						<h2 className="text-black text-4xl tracking-wider font-bold">
+					<div className="bg-[#e9451f] inline-block px-8 py-2 rounded-full">
+						<h2 className="text-black text-2xl sm:text-3xl md:text-4xl tracking-wider font-bold">
 							FAQS
 						</h2>
 					</div>
 				</div>
 
 				<div className="relative bg-[#e9451f] p-10 rounded-[2rem] text-center">
-					<h3 className="text-black text-3xl md:text-4xl font-bold mb-8 leading-tight">
+					<h3 className="text-black text-xl sm:text-2xl md:text-4xl font-bold mb-8 leading-tight">
 						{faqs[currentIndex].question}
 					</h3>
 					<p className="text-black text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed">
@@ -118,11 +118,10 @@ const FAQ = () => {
 							<button
 								key={idx}
 								onClick={() => setCurrentIndex(idx)}
-								className={`w-3 h-3 rounded-full transition-all duration-300 ${
-									idx === currentIndex
+								className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === currentIndex
 										? "bg-black w-6"
 										: "bg-black/40 hover:bg-black/60"
-								}`}
+									}`}
 								aria-label={`Go to question ${idx + 1}`}
 							/>
 						))}

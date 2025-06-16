@@ -124,7 +124,7 @@ const DigitalSwag: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 mt-[-1.5rem]">
           <h1
-            className="text-6xl sm:text-7xl lg:text-7xl font-bold text-white tracking-wider mb-4"
+            className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white tracking-wider mb-4"
             style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
           >
             DIGITAL SWAG
@@ -142,35 +142,35 @@ const DigitalSwag: React.FC = () => {
 
           {/* Controls */}
           <div className="w-full md:w-1/2 lg:w-1/3 space-y-6">
-          <div className="max-w-2xl mx-auto text-gray-300 space-y-3 mb-6">
-  <p
-    className="text-xs"
-    style={{ fontFamily: "Zendots, monospace" }}
-  >
-    We appreciate your participation in Code For Bharat Season 2! For all of you, we have a gift 🎁—this season’s Digital Swag. You can download it, post it on your socials, and don’t forget to tag us. There is a special gift 🎁 for you!
-  </p>
-  <ul
-    className="list-disc list-inside space-y-1"
-    style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
-  >
-    <li>Enter your name</li>
-    <li>Upload your photo</li>
-    <li>Download your Digital Swag</li>
-    <li>Share it on social media and tag us for special gift! 🎁</li>
-  </ul>
-  <p
-    className="text-orange-400 font-semibold mt-2"
-    style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
-  >
-    Special gift 🎁 for some lucky hackers—announcement soon!
-  </p>
-  <p
-    className="text-xs italic mt-3"
-    style={{ fontFamily: "Zendots, monospace" }}
-  >
-    Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
-  </p>
-</div>
+            <div className="max-w-2xl mx-auto text-gray-300 space-y-3 mb-6">
+              <p
+                className="text-xs"
+                style={{ fontFamily: "Zendots, monospace" }}
+              >
+                We appreciate your participation in Code For Bharat Season 2! For all of you, we have a gift 🎁—this season’s Digital Swag. You can download it, post it on your socials, and don’t forget to tag us. There is a special gift 🎁 for you!
+              </p>
+              <ul
+                className="list-disc list-inside space-y-1"
+                style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
+              >
+                <li>Enter your name</li>
+                <li>Upload your photo</li>
+                <li>Download your Digital Swag</li>
+                <li>Share it on social media and tag us for special gift! 🎁</li>
+              </ul>
+              <p
+                className="text-orange-400 font-semibold mt-2"
+                style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
+              >
+                Special gift 🎁 for some lucky hackers—announcement soon!
+              </p>
+              <p
+                className="text-xs italic mt-3"
+                style={{ fontFamily: "Zendots, monospace" }}
+              >
+                Note: Your privacy is our priority. We do not store your photos on our servers or use them in any other way that compromises your privacy.
+              </p>
+            </div>
             <div>
               <label
                 className="block text-gray-300 text-sm mb-2"
@@ -196,7 +196,7 @@ const DigitalSwag: React.FC = () => {
                 onChange={handleImageUpload}
                 className="hidden"
               />
-              
+
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="w-full flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all"

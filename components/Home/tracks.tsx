@@ -60,13 +60,14 @@ export const Tracks = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: false, amount: 0.5 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="text-7xl font-bold text-white mb-12 mt-10 "
+				className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white mb-8 mt-10 text-center"
 				style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
 			>
 				TRACKS
 			</motion.div>
 
-			<div className="mt-4 p-4 flex gap-6">
+			{/* Responsive cards container */}
+			<div className="mt-4 p-2 w-full flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-transparent sm:justify-center">
 				{tracks.map((payload, index) => {
 					// Always keep one card open (default: first card)
 					const isActive =
@@ -90,20 +91,29 @@ export const Tracks = () => {
 								ease: "easeOut",
 								delay: 0.1 * index,
 							}}
-							className={`transition-all duration-500 ease-in-out ${
-								isActive
-									? "w-[22rem] rounded-[40px]"
-									: "w-[7rem] rounded-[40px]"
-							} h-[28rem] bg-[#c04123] relative overflow-hidden`}
+							className={`
+            transition-all duration-500 ease-in-out
+            bg-[#c04123] relative overflow-hidden
+            rounded-[30px]
+            ${isActive
+									? "w-[16rem] sm:w-[22rem] h-[20rem] sm:h-[28rem]"
+									: "w-[5rem] sm:w-[7rem] h-[20rem] sm:h-[28rem]"
+								}
+            flex-shrink-0
+          `}
+							style={{
+								minWidth: isActive ? "16rem" : "5rem",
+								maxWidth: isActive ? "22rem" : "7rem",
+							}}
 						>
 							<img
 								src={payload.imageUrl}
 								alt={payload.name}
 								className="w-full h-full object-cover"
 							/>
-							<div className="bg-black absolute p-4 bottom-0 left-0 right-0">
+							<div className="bg-black absolute p-2 sm:p-4 bottom-0 left-0 right-0">
 								<div
-									className="font-bold text-2xl p-2 rounded-full border-4 border-white text-white bg-transparent flex justify-center items-center text-center"
+									className="font-bold text-lg sm:text-2xl p-2 rounded-full border-4 border-white text-white bg-transparent flex justify-center items-center text-center"
 									style={{ fontFamily: "Zendots, monospace" }}
 								>
 									{isActive ? payload.name : payload.id}

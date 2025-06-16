@@ -69,7 +69,7 @@ const SideNavigation: React.FC = () => {
         <div className="absolute inset-0 rounded-full bg-gradient-to-b from-orange-500/20 to-orange-600/20 blur-sm"></div>
         
         {/* Main navigation container */}
-        <nav className="relative bg-slate-900/90 backdrop-blur-sm rounded-full py-6 px-3 border border-orange-500/30">
+        <nav className="relative bg-gray-800/70 rounded-full py-6 px-3 border-2 border-orange-500 border-solid">
           <ul className="space-y-6">
             {navItems.map(item => (
               <li key={item.id}>

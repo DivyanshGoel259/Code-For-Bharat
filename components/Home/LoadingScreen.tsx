@@ -67,7 +67,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           ${showSecondLine ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
           flex justify-center
         `}>
-          <span className="text-white text-3xl md:text-7xl font-bold flex items-center justify-center text-center w-full">
+          <span className="text-white text-xl md:text-6xl font-bold flex items-center justify-center text-center w-full">
             &gt; initializing_v2.0_core
             <span className={`
               ${showDots ? 'animate-[blink_1s_ease-in-out_3]' : 'opacity-0'}
