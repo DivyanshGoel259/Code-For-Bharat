@@ -36,7 +36,7 @@ const Timeline: React.FC = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="min-h-screen py-8 px-4 flex flex-col items-center"
+      className="mt-10 min-h-screen py-8 px-4 flex flex-col items-center"
       style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }} // Apply Hagrid font to all
     >
       <motion.h1

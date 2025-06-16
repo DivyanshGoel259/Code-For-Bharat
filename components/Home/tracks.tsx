@@ -60,13 +60,13 @@ export const Tracks = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: false, amount: 0.5 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="text-7xl font-bold text-white mb-12"
+				className="text-7xl font-bold text-white mb-12 mt-10 "
 				style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
 			>
-				Tracks
+				TRACKS
 			</motion.div>
 
-			<div className="mt-10 p-4 flex gap-6">
+			<div className="mt-4 p-4 flex gap-6">
 				{tracks.map((payload, index) => {
 					// Always keep one card open (default: first card)
 					const isActive =

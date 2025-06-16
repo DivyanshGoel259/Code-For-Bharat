@@ -17,15 +17,19 @@ export const AboutSection = () => {
   const secondRow = items.slice(items.length / 2);
 
   return (
-    <div id='about' className="font-Hagrid overflow-hidden bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center py-10 px-4">
+    <div id='about' className="mt-10 font-Hagrid overflow-hidden bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center py-10 px-4">
 
       {/* Heading */}
-      <h2
-        className="text-6xl sm:text-7xl lg:text-8xl font-bold text-center text-white mb-2"
+      <motion.h2
+        className="text-5xl sm:text-6xl lg:text-7xl font-bold text-center text-white mb-2"
         style={{ fontFamily: "Hagrid-Text-Extrabold-trial, serif" }}
+         initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
-        About Us
-      </h2>
+        ABOUT US
+      </motion.h2>
 
       {/* Subheading */}
       <motion.div
@@ -33,7 +37,7 @@ export const AboutSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-6xl text-justify text-white mt-4 p-4 text-xl sm:text-2xl"
+        className="max-w-6xl text-white mt-4 p-4 text-md sm:text-xl text-center"
         style={{
           fontFamily: "Zendots, monospace",
           fontWeight: 400,
@@ -46,10 +50,10 @@ export const AboutSection = () => {
 
       {/* Stats Section */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
+         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         className="flex gap-16 mt-8 flex-wrap justify-center"
         style={{ fontFamily: "Zendots, monospace" }} // Apply Zendots font
       >
@@ -92,7 +96,7 @@ export const AboutSection = () => {
       </motion.div>
 
       {/* Marquee Carousel */}
-      <div className="mt-8">
+      <motion.div  className="mt-8" >
         <Marquee className="[--duration:15s]">
           {firstRow.map((payload, index) => (
             <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
@@ -103,7 +107,7 @@ export const AboutSection = () => {
             <CarouselCards key={index} imgUrl={payload.img} name={payload.name} />
           ))}
         </Marquee>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -111,9 +115,10 @@ export const AboutSection = () => {
 const CarouselCards = ({ imgUrl, name }: { imgUrl: string; name: string }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay: Math.random() * 0.5 }}
+       initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       className="w-40 h-40 flex justify-center items-center border-4 border-[#e9451f] rounded-[22px] overflow-hidden" // increased size
     >
       <Image
