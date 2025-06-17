@@ -92,7 +92,7 @@ const DigitalSwag: React.FC = () => {
 
     // Load the frame image
     const img = new Image();
-    img.src = '/pic.jpg';
+    img.src = '/call-for-hackers-1.png';
     img.onload = () => {
       frameImage.current = img;
       generateSwag();
@@ -172,6 +172,8 @@ const DigitalSwag: React.FC = () => {
               </p>
             </div>
             <div>
+              {/* Name input and label are commented out to disable text writing */}
+              {/*
               <label
                 className="block text-gray-300 text-sm mb-2"
                 style={{ fontFamily: "Zendots, monospace" }}
@@ -185,7 +187,9 @@ const DigitalSwag: React.FC = () => {
                 className="w-full bg-[#1a0f0f] border border-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all"
                 placeholder="Your name here"
                 style={{ fontFamily: "Zendots, monospace" }}
+                disabled
               />
+              */}
             </div>
 
             <div className="flex flex-col gap-4">
