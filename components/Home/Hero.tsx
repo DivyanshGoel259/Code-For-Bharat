@@ -47,6 +47,7 @@ export const CodeForBharatLanding = () => {
           </g>
         </svg>
       </div>
+
       {/* Top Right SVG */}
       <div className="hidden md:block absolute top-4 right-4 glow-effect">
         <svg width="74" height="77" viewBox="0 0 74 77" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,14 +140,14 @@ export const CodeForBharatLanding = () => {
               <React.Fragment key={index}>
                 <div className="flex flex-col items-center">
                   <div
-                    className="rounded-2xl border px-4 py-6 sm:px-8 sm:py-12 mb-2 sm:mb-3"
+                    className="rounded-2xl border px-6 py-6 sm:px-10 sm:py-14 mb-2 sm:mb-3"
                     style={{
-                      width: "64px",
-                      minWidth: "64px",
-                      maxWidth: "64px",
-                      height: "64px",
-                      minHeight: "64px",
-                      maxHeight: "64px",
+                      width: "90px",
+                      minWidth: "90px",
+                      maxWidth: "90px",
+                      height: "100px",
+                      minHeight: "100px",
+                      maxHeight: "100px",
                       background: 'linear-gradient(145deg, #2a2a2a, #1a1a1a)',
                       borderColor: '#444444',
                       boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)',
@@ -155,10 +156,10 @@ export const CodeForBharatLanding = () => {
                       justifyContent: 'center'
                     }}
                   >
-                    <div
-                      className="text-xl sm:text-4xl md:text-5xl font-bold"
-                      style={{ color: '#ffffff', fontFamily: 'Zendots, monospace' }}
-                    >
+                      <div
+                        className="text-xl sm:text-3xl md:text-4xl font-bold"
+                        style={{ color: '#ffffff', fontFamily: 'Zendots, monospace' }}
+                      >
                       {item.value}
                     </div>
                   </div>

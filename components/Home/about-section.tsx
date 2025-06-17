@@ -115,13 +115,13 @@ export const AboutSection = () => {
 const CarouselCards = ({ imgUrl, name }: { imgUrl: string; name: string }) => {
   return (
     <motion.div
-      className="w-40 h-40 flex justify-center items-center border-4 border-[#e9451f] rounded-[22px] overflow-hidden"
+      className="w-64 h-40 flex justify-center items-center border-4 border-[#e9451f] rounded-[16px] overflow-hidden"
     >
       <Image
-        className="rounded-lg object-cover w-full h-full" // 👈 Force image to fill the box properly
+        className="object-cover w-full h-full"
         src={imgUrl}
         alt={`Image of ${name}`}
-        width={160}
+        width={256}
         height={160}
         loading="lazy"
       />
