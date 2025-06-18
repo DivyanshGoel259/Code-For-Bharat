@@ -67,7 +67,7 @@ const DigitalSwag: React.FC = () => {
         ctx.drawImage(img, x, y, scaledWidth, scaledHeight);
 
         // Now draw the frame image on top (covering the whole canvas)
-        if (frameImage) {
+        if (frameImage.current) {
           ctx.drawImage(frameImage.current, 0, 0, canvas.width, canvas.height);
         }
       };
