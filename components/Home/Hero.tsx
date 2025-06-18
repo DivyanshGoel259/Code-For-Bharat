@@ -47,11 +47,10 @@ export const CodeForBharatLanding = () => {
           </g>
         </svg>
       </div>
-
       {/* Top Right SVG */}
-      <div className="hidden md:block absolute top-4 right-4 glow-effect">
+      <div className="hidden md:block absolute top-10 right-10 glow-effect">
         <svg width="74" height="77" viewBox="0 0 74 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_22_824"  maskUnits="userSpaceOnUse" x="0" y="0" width="74" height="70">
+<mask id="mask0_22_824"  maskUnits="userSpaceOnUse" x="0" y="0" width="68" height="68">
 <path d="M0 0H73.7708V76.2186H0V0Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_22_824)">
@@ -60,20 +59,19 @@ export const CodeForBharatLanding = () => {
 </svg>
 
       </div>
-      {/* Bottom Left SVG (mirror of Top Right) */}
+      {/* Bottom Left SVG */}
       <div className="hidden md:block absolute bottom-10 left-10 glow-effect">
         <svg width="74" height="77" viewBox="0 0 74 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_22_824" maskUnits="userSpaceOnUse" x="0" y="0" width="74" height="77">
+<mask id="mask0_22_824"  maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="70">
 <path d="M0 0H73.7708V76.2186H0V0Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_22_824)">
 <path d="M44.5785 0.00878906V30.548H73.7708V45.3428H44.5785V76.1712H29.1923V45.3428H0V30.548H29.1923V0.00878906H44.5785Z" fill="#F1FB84"/>
 </g>
 </svg>
-
       </div>
-      {/* Bottom Right SVG (mirror of Top Left) */}
-      <div className="hidden md:block absolute bottom-16 right-10 glow-effect">
+      {/* Bottom Right SVG */}
+      <div className="hidden md:block absolute bottom-10 right-10 glow-effect">
         <svg
           width="70"
           height="42"
@@ -140,26 +138,22 @@ export const CodeForBharatLanding = () => {
               <React.Fragment key={index}>
                 <div className="flex flex-col items-center">
                   <div
-                    className="rounded-2xl border px-6 py-6 sm:px-10 sm:py-14 mb-2 sm:mb-3"
+                    className="rounded-2xl border mb-2 sm:mb-3
+                      w-16 h-16 px-2 py-3
+                      sm:w-[90px] sm:h-[100px] sm:px-6 sm:py-6
+                      md:w-[90px] md:h-[100px] md:px-6 md:py-6
+                      lg:w-[90px] lg:h-[100px] lg:px-6 lg:py-6
+                      flex items-center justify-center"
                     style={{
-                      width: "90px",
-                      minWidth: "90px",
-                      maxWidth: "90px",
-                      height: "100px",
-                      minHeight: "100px",
-                      maxHeight: "100px",
                       background: 'linear-gradient(145deg, #2a2a2a, #1a1a1a)',
                       borderColor: '#444444',
                       boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center'
                     }}
                   >
-                      <div
-                        className="text-xl sm:text-3xl md:text-4xl font-bold"
-                        style={{ color: '#ffffff', fontFamily: 'Zendots, monospace' }}
-                      >
+                    <div
+                      className="text-lg sm:text-3xl md:text-4xl font-bold"
+                      style={{ color: '#ffffff', fontFamily: 'Zendots, monospace' }}
+                    >
                       {item.value}
                     </div>
                   </div>
@@ -173,7 +167,7 @@ export const CodeForBharatLanding = () => {
                 {/* Add colon between boxes except after the last one */}
                 {index < arr.length - 1 && (
                   <span
-                    className="text-2xl sm:text-5xl md:text-6xl font-bold mx-1 sm:mx-2 mb-6 sm:mb-10"
+                    className="text-xl sm:text-5xl md:text-6xl font-bold mx-1 sm:mx-2 mb-6 sm:mb-10"
                     style={{ color: '#ff5722', fontFamily: 'Zendots, monospace', userSelect: 'none' }}
                   >
                     :
@@ -225,3 +219,4 @@ export const CodeForBharatLanding = () => {
     </div>
   );
 };
+
