@@ -21,9 +21,9 @@ const Timeline: React.FC = () => {
   const timelineItems: TimelineItem[] = [
     { date: "20", month: "MAY", title: "REGISTRATIONS\nOPEN", side: "right" },
     { date: "09", month: "JUNE", title: "PROFILE\nSHORTLISTING", side: "left" },
+    { date: "15", month: "JUNE", title: "PROJECT\nSUBMISSION\nBEGINS", side: "right" }, // changed
     { date: "10", month: "JULY", title: "REGISTRATIONS\nCLOSE", side: "right" },
-    { date: "20", month: "JUNE", title: "PROJECT\nSUBMISSION\nBEGINS", side: "left" },
-    { date: "15", month: "JULY", title: "PROJECT\nSUBMISSION\nENDS", side: "right" },
+    { date: "05", month: "JULY", title: "PROJECT\nSUBMISSION\nENDS", side: "left" }, // changed
     { date: "18", month: "JULY", title: "SCREENING\nROUND", side: "left" },
     { date: "19", month: "JULY", title: "FINAL\nONLINE ROUND\nDAY 1", side: "right" },
     { date: "20", month: "JULY", title: "FINAL\nONLINE ROUND\nDAY 2", side: "left" },

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Upload, Download } from 'lucide-react';
 
 const DigitalSwag: React.FC = () => {
@@ -19,7 +19,7 @@ const DigitalSwag: React.FC = () => {
     }
   };
 
-  const generateSwag = () => {
+  const generateSwag = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas || !frameImage.current) return;
 
@@ -44,12 +44,13 @@ const DigitalSwag: React.FC = () => {
     if (image) {
       const img = new Image();
       img.onload = () => {
-        // Calculate dimensions to fit the image in the red area while maintaining aspect ratio
+        // Red area (blank area in the frame)
         const redAreaX = 200;
         const redAreaY = 150;
         const redAreaWidth = 500;
         const redAreaHeight = 500;
 
+        // Calculate scale to fit image in the blank area
         const scale = Math.min(
           redAreaWidth / img.width,
           redAreaHeight / img.height
@@ -58,19 +59,16 @@ const DigitalSwag: React.FC = () => {
         const scaledWidth = img.width * scale;
         const scaledHeight = img.height * scale;
 
-        // Center the image in the red area
+        // Center the image in the blank area
         const x = redAreaX + (redAreaWidth - scaledWidth) / 2;
         const y = redAreaY + (redAreaHeight - scaledHeight) / 2;
 
-        // Draw the image
+        // Draw the image behind the frame
         ctx.drawImage(img, x, y, scaledWidth, scaledHeight);
 
-        // Draw the name
-        if (name) {
-          ctx.fillStyle = '#ffffff';
-          ctx.textAlign = 'center';
-          ctx.font = 'bold 60px "Space Grotesk"';
-          ctx.fillText(name.toUpperCase(), canvas.width / 2, 750);
+        // Now draw the frame image on top (covering the whole canvas)
+        if (frameImage) {
+          ctx.drawImage(frameImage.current, 0, 0, canvas.width, canvas.height);
         }
       };
       img.src = image;
@@ -81,7 +79,7 @@ const DigitalSwag: React.FC = () => {
       ctx.textAlign = 'center';
       ctx.fillText(name.toUpperCase(), canvas.width / 2, 750);
     }
-  };
+  }, [image, name]);
 
   useEffect(() => {
     // Load Space Grotesk font
@@ -102,11 +100,11 @@ const DigitalSwag: React.FC = () => {
       document.fonts.add(font);
       generateSwag();
     });
-  }, []);
+  }, [generateSwag]);
 
   useEffect(() => {
     generateSwag();
-  }, [image, name]);
+  }, [image, name, generateSwag]);
 
   const handleDownload = () => {
     const canvas = canvasRef.current;
@@ -144,7 +142,7 @@ const DigitalSwag: React.FC = () => {
           <div className="w-full md:w-1/2 lg:w-1/3 space-y-6">
             <div className="max-w-2xl mx-auto text-gray-300 space-y-3 mb-6">
               <p
-                className="text-xs"
+                className="text-sm"
                 style={{ fontFamily: "Zendots, monospace" }}
               >
                 We appreciate your participation in Code For Bharat Season 2! For all of you, we have a gift 🎁—this season’s Digital Swag. You can download it, post it on your socials, and don’t forget to tag us. There is a special gift 🎁 for you!
@@ -153,7 +151,7 @@ const DigitalSwag: React.FC = () => {
                 className="list-disc list-inside space-y-1"
                 style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
               >
-                <li>Enter your name</li>
+              
                 <li>Upload your photo</li>
                 <li>Download your Digital Swag</li>
                 <li>Share it on social media and tag us for special gift! 🎁</li>

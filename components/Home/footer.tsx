@@ -11,16 +11,14 @@ const Footer = () => {
       <div className="relative z-10 px-8 py-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
-          {/* Logo and Organizing Body */}
-          <div className="flex items-start space-x-4 md:ml-24">
-            <div>
-              <h2 className="text-xl font-bold">TECH MASTERS</h2>
-              <h3 className="text-lg font-semibold">INDIA</h3>
-            </div>
-          </div>
-          {/* Stay Connected */}
-          <div className="mt-8 md:mt-0">
-            <h2 className="text-3xl font-bold">Stay Connected</h2>
+          {/* Logo only, no text */}
+          <div className="flex items-start md:ml-24">
+            <img
+              src="/tmi-black.png"
+              alt="Tech Masters India Logo"
+              className="w-48 h-auto"
+              style={{ maxWidth: "220px" }}
+            />
           </div>
         </div>
         {/* Bottom Section */}
