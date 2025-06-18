@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
-const targetDate = new Date("2025-07-01T00:00:00Z");
+const targetDate = new Date("2025-07-10T23:59:59Z");
 
 function getTimeLeft() {
   const now = new Date();
@@ -124,7 +124,7 @@ export const CodeForBharatLanding = () => {
               fontWeight: '600'
             }}
           >
-            HACK BEGINS IN:
+            REGISTRATION ENDS IN:
           </h2>
 
           {/* Countdown Timer */}
