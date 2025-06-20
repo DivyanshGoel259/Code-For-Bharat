@@ -38,8 +38,8 @@ const sponsorCategories: SponsorCategory[] = [
     ]
   },
   {
-    id: 'Sponsor',
-    name: 'Sponsor',
+    id: 'Sponsors',
+    name: 'Sponsors',
     sponsors: [
       {
         id: 'plat1',

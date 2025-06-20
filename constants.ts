@@ -154,3 +154,23 @@ export const teamCards= [
     linkedin_Url: "https://www.linkedin.com/in/kur-deependra-singh"
   }
 ];
+
+
+export const mentorsAndJudges = [
+  { "id": 1, "name": "Rachit Khurana", "url": "https://www.linkedin.com/in/rachitkhurana1" },
+  { "id": 2, "name": "Kamal Kashyap", "url": "https://www.linkedin.com/in/kamal-kashyap-393a6b1b7" },
+  { "id": 3, "name": "Sajal Batra", "url": "https://www.linkedin.com/in/sajal-batra/" },
+  { "id": 4, "name": "Shivam Goyal", "url": "https://www.linkedin.com/in/shivamgoyall/" },
+  { "id": 5, "name": "Shiti Sharma", "url": "https://in.linkedin.com/in/shitisharma" },
+  { "id": 6, "name": "Zishan Ahmed Saifi", "url": "https://in.linkedin.com/in/zishan-ahmed-saifi-bba7b520b" },
+  { "id": 7, "name": "Pawan Singhla", "url": "https://www.linkedin.com/in/pawansinghla300/" },
+  { "id": 8, "name": "Tushika Rawat", "url": "https://www.linkedin.com/in/tushika-rawat/" },
+  { "id": 9, "name": "Sairam Kaushik", "url": "https://www.linkedin.com/in/sairamkaushik/" },
+  { "id": 10, "name": "Harshita Gupta", "url": "https://www.linkedin.com/in/harshita-gupta-03b6b125b/" },
+  { "id": 11, "name": "Khushi", "url": "https://linkedin.com/in/smilewithkhushi" },
+  { "id": 12, "name": "Taranjot Singh", "url": "https://www.linkedin.com/in/taranjotsingh23" },
+  { "id": 13, "name": "Piyush Dhall", "url": "https://www.linkedin.com/in/piyush-dhall/" },
+  { "id": 14, "name": "Krish Khattar", "url": "https://www.linkedin.com/in/krishkhattar" },
+  { "id": 15, "name": "Zishan Ahmed Saifi", "url": "https://www.linkedin.com/in/zishan-ahmed-saifi-bba7b520b" },
+  { "id": 16, "name": "Colossal Monk", "url": "https://www.linkedin.com/in/colossalmonk/" }
+]
