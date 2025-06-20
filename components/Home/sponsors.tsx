@@ -57,7 +57,18 @@ const sponsorCategories: SponsorCategory[] = [
         image: 'https://placehold.co/400x200/333/FF4500?text=Platinum+3'
       }
     ]
-  }
+  },
+  {
+    id: 'Media Partner',
+    name: 'Media Partner',
+    sponsors: [
+      {
+        id: 'Media Partner',
+        name: 'Media Partner',
+        image: '/DroomDroom_White.png' 
+      }
+    ]
+  },
 ];
 
 const Sponsors: React.FC = () => {
@@ -149,6 +160,27 @@ const Sponsors: React.FC = () => {
                   src={sponsorCategories[2].sponsors[2].image}
                   alt={sponsorCategories[2].sponsors[2].name}
                   className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Media Partner */}
+          <AnimatedSection variant="fade-up" delay={450}>
+            <h3
+              className="text-lg sm:text-2xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
+              style={{ fontFamily: "Zendots, monospace" }}
+            >
+              {sponsorCategories[3].name}
+            </h3>
+            <div className="flex justify-center">
+              <div
+                className="aspect-[5/3] w-full max-w-xs border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20"
+              >
+                <img
+                  src={sponsorCategories[3].sponsors[0].image}
+                  alt={sponsorCategories[3].sponsors[0].name}
+                  className="w-full h-full object-contain bg-[#333333]"
                 />
               </div>
             </div>
