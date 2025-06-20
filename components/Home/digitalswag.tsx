@@ -57,12 +57,19 @@ const DigitalSwag: React.FC = () => {
           photoAreaHeight / img.height
         );
 
-        const scaledWidth = 500;
-        const scaledHeight =450;
-
+        // Calculate scale to cover the photo area
+        const scale = Math.max(
+          photoAreaWidth / img.width,
+          photoAreaHeight / img.height
+        );
+        
+        const scaledWidth = img.width * scale;
+        const scaledHeight = img.height * scale;
+        
         // Center the image in the photo area
-        const x = 200
-        const y = 150
+        const x = photoAreaX + (photoAreaWidth - scaledWidth) / 2;
+        const y = photoAreaY + (photoAreaHeight - scaledHeight) / 2;
+        
         // Draw the frame first (background)
         ctx.drawImage(frameImage.current!, 0, 0, canvas.width, canvas.height);
 
