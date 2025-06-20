@@ -46,10 +46,10 @@ const DigitalSwag: React.FC = () => {
       img.crossOrigin = "anonymous";
       img.onload = () => {
         // Photo area (where the uploaded image should go)
-        const photoAreaX = 200;
-        const photoAreaY = 150;
-        const photoAreaWidth = 500;
-        const photoAreaHeight = 500;
+        const photoAreaX = 400;
+        const photoAreaY = 300;
+        const photoAreaWidth = 800;
+        const photoAreaHeight = 800;
 
         // Calculate scale to cover the area (cover, not contain)
         const scale = Math.max(
@@ -57,12 +57,19 @@ const DigitalSwag: React.FC = () => {
           photoAreaHeight / img.height
         );
 
-        const scaledWidth = 500;
-        const scaledHeight =450;
-
+        // Calculate scale to cover the photo area
+        const scale = Math.max(
+          photoAreaWidth / img.width,
+          photoAreaHeight / img.height
+        );
+        
+        const scaledWidth = img.width * scale;
+        const scaledHeight = img.height * scale;
+        
         // Center the image in the photo area
-        const x = 200
-        const y = 150
+        const x = photoAreaX + (photoAreaWidth - scaledWidth) / 2;
+        const y = photoAreaY + (photoAreaHeight - scaledHeight) / 2;
+        
         // Draw the frame first (background)
         ctx.drawImage(frameImage.current!, 0, 0, canvas.width, canvas.height);
 
