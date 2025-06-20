@@ -19,16 +19,16 @@ const Timeline: React.FC = () => {
   if (!hasMounted) return null; // Prevent hydration mismatch flash
 
   const timelineItems: TimelineItem[] = [
-    { date: "20", month: "MAY", title: "REGISTRATIONS\nOPEN", side: "right" },
-    { date: "09", month: "JUNE", title: "PROFILE\nSHORTLISTING", side: "left" },
-    { date: "15", month: "JUNE", title: "PROJECT\nSUBMISSION\nBEGINS", side: "right" }, // changed
+    { date: "20", month: "MAY", title: "REGISTRATIONS\nOPEN", side: "left" },
+    { date: "09", month: "JUNE", title: "PROFILE\nSHORTLISTING", side: "right" },
+    { date: "15", month: "JUNE", title: "PROJECT\nSUBMISSION\nBEGINS", side: "left" },
     { date: "10", month: "JULY", title: "REGISTRATIONS\nCLOSE", side: "right" },
-    { date: "05", month: "JULY", title: "PROJECT\nSUBMISSION\nENDS", side: "left" }, // changed
-    { date: "18", month: "JULY", title: "SCREENING\nROUND", side: "left" },
-    { date: "19", month: "JULY", title: "FINAL\nONLINE ROUND\nDAY 1", side: "right" },
-    { date: "20", month: "JULY", title: "FINAL\nONLINE ROUND\nDAY 2", side: "left" },
-    { date: "23", month: "JULY", title: "RESULTS\nANNOUNCEMENT", side: "right" },
-    { date: "02", month: "AUG", title: "GRAND\nFINALE", side: "left" },
+    { date: "05", month: "JULY", title: "PROJECT\nSUBMISSION\nENDS", side: "left" },
+    { date: "18", month: "JULY", title: "SCREENING\nROUND", side: "right" },
+    { date: "19", month: "JULY", title: "FINAL\nONLINE ROUND\nDAY 1", side: "left" },
+    { date: "20", month: "JULY", title: "FINAL\nONLINE ROUND\nDAY 2", side: "right" },
+    { date: "23", month: "JULY", title: "RESULTS\nANNOUNCEMENT", side: "left" },
+    { date: "02", month: "AUG", title: "GRAND\nFINALE", side: "right" },
   ];
 
   return (
