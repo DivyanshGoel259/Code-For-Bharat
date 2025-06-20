@@ -42,42 +42,81 @@ const DigitalSwag: React.FC = () => {
 
     // If there's an uploaded image, draw it in the red area
     if (image) {
-      const img = new Image();
+      const img = new window.Image();
+      img.crossOrigin = "anonymous";
       img.onload = () => {
-        // Red area (blank area in the frame)
-        const redAreaX = 200;
-        const redAreaY = 150;
-        const redAreaWidth = 500;
-        const redAreaHeight = 500;
+        // Photo area (where the uploaded image should go)
+        const photoAreaX = 200;
+        const photoAreaY = 150;
+        const photoAreaWidth = 500;
+        const photoAreaHeight = 500;
 
-        // Calculate scale to fit image in the blank area
-        const scale = Math.min(
-          redAreaWidth / img.width,
-          redAreaHeight / img.height
+        // Calculate scale to cover the area (cover, not contain)
+        const scale = Math.max(
+          photoAreaWidth / img.width,
+          photoAreaHeight / img.height
         );
 
-        const scaledWidth = img.width * scale;
-        const scaledHeight = img.height * scale;
+        const scaledWidth = 500;
+        const scaledHeight =450;
 
-        // Center the image in the blank area
-        const x = redAreaX + (redAreaWidth - scaledWidth) / 2;
-        const y = redAreaY + (redAreaHeight - scaledHeight) / 2;
+        // Center the image in the photo area
+        const x = 200
+        const y = 150
+        // Draw the frame first (background)
+        ctx.drawImage(frameImage.current!, 0, 0, canvas.width, canvas.height);
 
-        // Draw the image behind the frame
+        // Clip to the photo area so image doesn't draw outside
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(photoAreaX, photoAreaY, photoAreaWidth, photoAreaHeight);
+        ctx.closePath();
+        ctx.clip();
+
+        // Draw the uploaded image on top of the frame (higher z-index visually)
         ctx.drawImage(img, x, y, scaledWidth, scaledHeight);
 
-        // Now draw the frame image on top (covering the whole canvas)
-        if (frameImage.current) {
-          ctx.drawImage(frameImage.current, 0, 0, canvas.width, canvas.height);
+        ctx.restore();
+
+        // Draw the name if provided
+        if (name.trim()) {
+          ctx.font = 'bold 60px "Space Grotesk", Arial, sans-serif';
+          ctx.fillStyle = '#ffffff';
+          ctx.textAlign = 'center';
+          ctx.strokeStyle = '#000000';
+          ctx.lineWidth = 2;
+          ctx.strokeText(name.toUpperCase(), canvas.width / 2, 750);
+          ctx.fillText(name.toUpperCase(), canvas.width / 2, 750);
+        }
+      };
+      img.onerror = () => {
+        // fallback: just draw frame and name
+        ctx.drawImage(frameImage.current!, 0, 0, canvas.width, canvas.height);
+        if (name.trim()) {
+          ctx.font = 'bold 60px "Space Grotesk", Arial, sans-serif';
+          ctx.fillStyle = '#ffffff';
+          ctx.textAlign = 'center';
+          ctx.strokeStyle = '#000000';
+          ctx.lineWidth = 2;
+          ctx.strokeText(name.toUpperCase(), canvas.width / 2, 750);
+          ctx.fillText(name.toUpperCase(), canvas.width / 2, 750);
         }
       };
       img.src = image;
-    } else if (name) {
-      // If no image but name exists, just draw the name
-      ctx.font = 'bold 60px "Space Grotesk"';
-      ctx.fillStyle = '#ffffff';
-      ctx.textAlign = 'center';
-      ctx.fillText(name.toUpperCase(), canvas.width / 2, 750);
+    } else {
+      // Draw the frame only
+      ctx.drawImage(frameImage.current, 0, 0, canvas.width, canvas.height);
+
+      // Draw the name if provided
+      if (name.trim()) {
+        ctx.font = 'bold 60px "Space Grotesk", Arial, sans-serif';
+        ctx.fillStyle = '#ffffff';
+        ctx.textAlign = 'center';
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.strokeText(name.toUpperCase(), canvas.width / 2, 750);
+        ctx.fillText(name.toUpperCase(), canvas.width / 2, 750);
+      }
     }
   }, [image, name]);
 
@@ -151,7 +190,7 @@ const DigitalSwag: React.FC = () => {
                 className="list-disc list-inside space-y-1"
                 style={{ fontFamily: "Zendots, monospace", fontSize: "0.85rem" }}
               >
-              
+
                 <li>Upload your photo</li>
                 <li>Download your Digital Swag</li>
                 <li>Share it on social media and tag us for special gift! 🎁</li>
