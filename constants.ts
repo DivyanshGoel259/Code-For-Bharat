@@ -227,7 +227,7 @@ export const mentorsAndJudges = [
     id: 12,
     name: "Taranjot Singh",
     url: "https://www.linkedin.com/in/taranjotsingh23",
-    imageUrl: "/MentorsAndJudges/taranjot.jpg"
+    imageUrl: "/MentorsAndJudges/Taranjot.jpg"
   },
   
   {
