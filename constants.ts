@@ -229,6 +229,7 @@ export const mentorsAndJudges = [
     url: "https://www.linkedin.com/in/taranjotsingh23",
     imageUrl: "/MentorsAndJudges/taranjot.jpg"
   },
+  
   {
     id: 13,
     name: "Piyush Dhall",
