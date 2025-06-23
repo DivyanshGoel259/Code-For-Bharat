@@ -56,7 +56,18 @@ const sponsorCategories: SponsorCategory[] = [
       { id: 'plat14', name: 'Flatlogic', image: '/sponsorsLogo/png-transparent-flatlogic-stacked-logo-tech-companies-thumbnail-removebg-preview.png' },
       { id: 'plat15', name: 'True', image: '/sponsorsLogo/true.png' }
     ]
-  }
+  },
+  {
+    id: 'Media Partner',
+    name: 'Media Partner',
+    sponsors: [
+      {
+        id: 'Media Partner',
+        name: 'Media Partner',
+        image: '/DroomDroom_White.png' 
+      }
+    ]
+  },
 ];
 
 const Sponsors: React.FC = () => {
@@ -160,6 +171,27 @@ const Sponsors: React.FC = () => {
                   alt="DroomDroom Media Partner"
                   className="w-[80%] h-auto object-contain p-4"
                   style={{ maxHeight: "90px" }}
+                />
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Media Partner */}
+          <AnimatedSection variant="fade-up" delay={450}>
+            <h3
+              className="text-lg sm:text-2xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
+              style={{ fontFamily: "Zendots, monospace" }}
+            >
+              {sponsorCategories[3].name}
+            </h3>
+            <div className="flex justify-center">
+              <div
+                className="aspect-[5/3] w-full max-w-xs border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20"
+              >
+                <img
+                  src={sponsorCategories[3].sponsors[0].image}
+                  alt={sponsorCategories[3].sponsors[0].name}
+                  className="w-full h-full object-contain bg-[#333333]"
                 />
               </div>
             </div>
