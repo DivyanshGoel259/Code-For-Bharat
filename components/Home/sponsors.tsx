@@ -135,7 +135,7 @@ const Sponsors: React.FC = () => {
               {sponsorCategories[2].sponsors.map((sponsor) => (
                 <div
                   key={sponsor.id}
-                  className="aspect-[2/1] flex items-center justify-center border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 bg-white/5 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20"
+                  className="aspect-[2/1] flex items-center justify-center border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 bg-[#333333] hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20"
                 >
                   <img
                     src={sponsor.image}
