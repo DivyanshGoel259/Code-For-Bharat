@@ -47,7 +47,6 @@ const sponsorCategories: SponsorCategory[] = [
       { id: 'plat5', name: 'Balsamiq', image: '/sponsorsLogo/balsamiq_icon_circle.png' },
       { id: 'plat6', name: 'Codecrafters', image: '/sponsorsLogo/codecraftersio_logo.jpeg' },
       { id: 'plat7', name: 'DoraHacks', image: '/sponsorsLogo/dorahacks_logo.jpeg' },
-      { id: 'plat8', name: 'DroomDroom Black', image: '/sponsorsLogo/DroomDroom_Black.png' },
       { id: 'plat9', name: 'DroomDroom White', image: '/sponsorsLogo/DroomDroom_White.png' },
       { id: 'plat10', name: 'g30', image: '/sponsorsLogo/g30.png' },
       { id: 'plat11', name: 'GMC', image: '/sponsorsLogo/GMC LogoS.png' },
