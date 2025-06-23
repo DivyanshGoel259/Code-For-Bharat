@@ -29,11 +29,7 @@ const sponsorCategories: SponsorCategory[] = [
     id: 'powered',
     name: 'Powered By',
     sponsors: [
-      {
-        id: 'power1',
-        name: 'Power Sponsor',
-        image: 'https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/blue/Unstop-Logo-Blue-Large.jpg'
-      }
+      { id: 'power Sponsor', name: 'Unstop', image: '/sponsorsLogo/Unstop-Logo-White-Medium.png' },
     ]
   },
   {
@@ -41,8 +37,7 @@ const sponsorCategories: SponsorCategory[] = [
     name: 'Sponsors',
     sponsors: [
       { id: 'plat1', name: 'GeeksforGeeks', image: '/sponsorsLogo/GeeksforGeeks_idFKvyQOZ__1.png' },
-      { id: 'plat2', name: 'Physics Wallah', image: '/sponsorsLogo/Physics Wallah Logo PNG Vector (SVG) Free Download.jpeg' },
-      { id: 'plat3', name: 'Unstop', image: '/sponsorsLogo/Unstop-Logo-White-Medium.png' },
+      { id: 'plat2', name: 'Physics Wallah', image: '/sponsorsLogo/Physics Wallah Logo PNG Vector (SVG) Free Download.jpeg' },  
       { id: 'plat4', name: 'AoPS', image: '/sponsorsLogo/AoPS_Main_Logo (1).png' },
       { id: 'plat5', name: 'Balsamiq', image: '/sponsorsLogo/balsamiq_icon_circle.png' },
       { id: 'plat6', name: 'Codecrafters', image: '/sponsorsLogo/codecraftersio_logo.jpeg' },
