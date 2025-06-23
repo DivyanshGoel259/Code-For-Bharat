@@ -153,28 +153,6 @@ const Sponsors: React.FC = () => {
             </div>
           </AnimatedSection>
 
-          {/* Media Partner Section */}
-          <AnimatedSection variant="fade-up" delay={450}>
-            <h3
-              className="text-lg sm:text-2xl lg:text-4xl text-[#e9451f] text-center mb-6 font-bold tracking-wide"
-              style={{ fontFamily: "Zendots, monospace" }}
-            >
-              Media Partner
-            </h3>
-            <div className="flex justify-center">
-              <div
-                className="aspect-[3/1] w-full max-w-md border-2 border-orange-500/50 rounded-lg overflow-hidden transition-all duration-300 bg-white/5 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20 flex items-center justify-center"
-                style={{ minHeight: "100px" }}
-              >
-                <img
-                  src="/sponsorsLogo/DroomDroom_Black.png"
-                  alt="DroomDroom Media Partner"
-                  className="w-[80%] h-auto object-contain p-4"
-                  style={{ maxHeight: "90px" }}
-                />
-              </div>
-            </div>
-          </AnimatedSection>
 
           {/* Media Partner */}
           <AnimatedSection variant="fade-up" delay={450}>
