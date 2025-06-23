@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Code For Bharat",
-  description: "Revolution",
+  description: "Hackathon Website",
   icons:{
     icon:"/icon.png"
   }
