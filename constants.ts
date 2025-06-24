@@ -164,6 +164,12 @@ export const mentorsAndJudges = [
     imageUrl: "/MentorsAndJudges/Rachit khurana.jpeg.jpg"
   },
   {
+    id: 15,
+    name: "Uday Sharma",
+    url: "https://www.linkedin.com/in/udaydotai/",
+    imageUrl: "/MentorsAndJudges/Uday.png"
+  },
+  {
     id: 2,
     name: "Kamal Kashyap",
     url: "https://www.linkedin.com/in/kamal-kashyap-393a6b1b7",
@@ -180,6 +186,12 @@ export const mentorsAndJudges = [
     name: "Shivam Goyal",
     url: "https://www.linkedin.com/in/shivamgoyall/",
     imageUrl: "/MentorsAndJudges/Shivam Goyal.jpeg.jpg"
+  },
+  {
+    id: 4,
+    name: "Uday Sharma",
+    url: "https://www.linkedin.com/in/udaydotai/",
+    imageUrl: "/MentorsAndJudges/Uday.png"
   },
   {
     id: 5,
@@ -219,9 +231,9 @@ export const mentorsAndJudges = [
   },
   {
     id: 11,
-    name: "Khushi",
+    name: "Khushi Pamar",
     url: "https://linkedin.com/in/smilewithkhushi",
-    imageUrl: "/MentorsAndJudges/khushi.jpg"
+    imageUrl: "/MentorsAndJudges/Khushi1.jpg"
   },
   {
     id: 12,
@@ -242,16 +254,56 @@ export const mentorsAndJudges = [
     url: "https://www.linkedin.com/in/krishkhattar",
     imageUrl: "/MentorsAndJudges/krish.jpg"
   },
-  {
-    id: 15,
-    name: "Zishan Ahmed Saifi",
-    url: "https://www.linkedin.com/in/zishan-ahmed-saifi-bba7b520b",
-    imageUrl: "/MentorsAndJudges/Zishan Ahmed Saifi.jpg"
-  },
+ 
   {
     id: 16,
-    name: "Colossal Monk",
+    name: "Siddharth Satyarthi",
     url: "https://www.linkedin.com/in/colossalmonk/",
     imageUrl: "/MentorsAndJudges/Siddharth satyarthi.jpg"
-  }
+  },
+  {
+    id: 17,
+    name: "Maninder Singh",
+    url: "https://www.linkedin.com/in/manindersinghh",
+    imageUrl: "/MentorsAndJudges/maninder.png"
+  },
+  {
+    id: 18,
+    name: "Siddharth Chugh",
+    url: "https://www.linkedin.com/in/siddharth-chugh-538a23193/",
+    imageUrl: "/MentorsAndJudges/Siddharthchugh.jpg"
+  },
+  
+
+  {
+    id: 20,
+    name: "Sarthak Goel",
+    url: "https://linkedin.com/in/sarty-definite",
+    imageUrl: "/MentorsAndJudges/sarthak.jpg"  
+  },
+
+  {
+    id: 21,
+    name: "Akash Pal",
+    url: "https://www.linkedin.com/in/akash-pal-480088257/",
+    imageUrl: "/MentorsAndJudges/Akash.jpg"
+  },
+
+  {
+    id: 22,
+    name: "Anusha Mahajan",
+    url: "https://www.linkedin.com/in/anushamahajan",
+    imageUrl: "/MentorsAndJudges/Anusha.jpg"
+  },
+
+  {
+    id: 23,
+    name: "Shiv Chopra",
+    url: "https://www.linkedin.com/in/shiv-chopra-2258081b9",
+    imageUrl: "/MentorsAndJudges/shiv.jpg"
+  },
+
+
+
+
 ];

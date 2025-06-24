@@ -16,7 +16,7 @@ interface SponsorCategory {
 const sponsorCategories: SponsorCategory[] = [
   {
     id: 'organizing',
-    name: 'Organising Body',
+    name: 'Presented By ',
     sponsors: [
       {
         id: 'org1',
@@ -38,17 +38,18 @@ const sponsorCategories: SponsorCategory[] = [
     sponsors: [
       { id: 'plat1', name: 'GeeksforGeeks', image: '/sponsorsLogo/GeeksforGeeks_idFKvyQOZ__1.png' },
       { id: 'plat2', name: 'Physics Wallah', image: '/sponsorsLogo/Physics Wallah Logo PNG Vector (SVG) Free Download.jpeg' },  
-      { id: 'plat4', name: 'AoPS', image: '/sponsorsLogo/AoPS_Main_Logo (1).png' },
-      { id: 'plat5', name: 'Balsamiq', image: '/sponsorsLogo/balsamiq_icon_circle.png' },
-      { id: 'plat6', name: 'Codecrafters', image: '/sponsorsLogo/codecraftersio_logo.jpeg' },
+      { id: 'plat4', name: 'AoPS', image: '/sponsorsLogo/AOPS.png' },
+      { id: 'plat5', name: 'Balsamiq', image: '/sponsorsLogo/balsamiq.png' },
+      { id: 'plat6', name: 'Codecrafters', image: '/sponsorsLogo/code-crafters.png' },
       { id: 'plat7', name: 'DoraHacks', image: '/sponsorsLogo/dorahacks_logo.jpeg' },
-      { id: 'plat9', name: 'DroomDroom White', image: '/sponsorsLogo/DroomDroom_White.png' },
-      { id: 'plat10', name: 'g30', image: '/sponsorsLogo/g30.png' },
+      { id: 'plat10', name: 'g30', image: '/sponsorsLogo/interviewbuddy.png' },
       { id: 'plat11', name: 'GMC', image: '/sponsorsLogo/GMC LogoS.png' },
       { id: 'plat12', name: 'JetBrains', image: '/sponsorsLogo/jetbrains-mono-white.png' },
-      { id: 'plat13', name: 'phtUwOA6', image: '/sponsorsLogo/phtUwOA6_400x400-removebg-preview.png' },
-      { id: 'plat14', name: 'Flatlogic', image: '/sponsorsLogo/png-transparent-flatlogic-stacked-logo-tech-companies-thumbnail-removebg-preview.png' },
-      { id: 'plat15', name: 'True', image: '/sponsorsLogo/true.png' }
+      { id: 'plat13', name: 'phtUwOA6', image: '/sponsorsLogo/ID8.jpg' },
+      { id: 'plat14', name: 'Flatlogic', image: '/sponsorsLogo/Flat.png' },
+      { id: 'plat15', name: 'True', image: '/sponsorsLogo/cssbattles.png' },
+      
+
     ]
   },
   {
