@@ -231,7 +231,7 @@ export const mentorsAndJudges = [
   },
   {
     id: 11,
-    name: "Khushi Pamar",
+    name: "Khushi Panwar",
     url: "https://linkedin.com/in/smilewithkhushi",
     imageUrl: "/MentorsAndJudges/Khushi1.jpg"
   },
